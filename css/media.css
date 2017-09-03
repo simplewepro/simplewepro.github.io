@@ -1,0 +1,593 @@
+/*======== Адаптив ========*/
+@media (min-width: 0px) and (max-width: 320px) {
+  .nav-large {
+    display: none;
+  }
+  .nav-small {
+    display: inline-block;
+  }
+  .map {
+    display: none;
+  }
+  header .wrapper {
+    padding-right: 18px;
+    height: auto;
+  }
+  header .wrapper h1 {
+    padding-top: 100px;
+    font-size: 44px;
+  }
+  header .wrapper h2 {
+    font-size: 22px;
+  }
+  header .wrapper button {
+    margin-bottom: 50px;
+    font-size: 16px;
+    padding: 15px 40px 15px 40px;
+  }
+  header .wrapper a {
+    display: none;
+  }
+  section#about #about-left h2 {
+    padding-top: 10px;
+    font-size: 36px;
+  }
+  section#about #about-left h4 {
+    line-height: 1.4;
+  }
+  section#about #about-left h4 br {
+    display: none;
+  }
+  section#about #about-right {
+    display: none;
+  }
+  section#nature h1 {
+    padding-top: 40px;
+    font-size: 36px;
+    line-height: 1;
+  }
+  section#nature h1 br {
+    display: none;
+  }
+  section#nature h4 {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    padding-bottom: 50px;
+  }
+  section#nature h4 br {
+    display: none;
+  }
+  #services__anim {
+    display: none;
+  }
+  section#learn-more {
+    height: 180px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  section#learn-more h1 {
+    font-size: 24px;
+  }
+  section#learn-more button {
+    font-size: 14px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  section#gallery .gallery-head {
+    padding-left: 10px;
+  }
+  section#gallery .gallery-head h1 {
+    font-size: 24px;
+  }
+  section#gallery .gallery-head h4 {
+    font-size: 18px;
+  }
+  section#gallery .gallery-head h4 br {
+    display: none;
+  }
+  section#gallery .gallery-more,
+  section#gallery .gallery-card {
+    height: 300px;
+  }
+  section#gallery .gallery-more h4,
+  section#gallery .gallery-card h4,
+  section#gallery .gallery-more a,
+  section#gallery .gallery-card a,
+  section#gallery .gallery-more h3,
+  section#gallery .gallery-card h3 {
+    font-size: 18px;
+  }
+  section#callback .callback-form {
+    margin-right: 7px;
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+  }
+  section#callback .callback-form h1 {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+  section#callback .callback-form form {
+    padding-left: 0;
+  }
+  section#callback .callback-form form input,
+  section#callback .callback-form form textarea {
+    width: 90%;
+  }
+  section#callback .callback-form form input {
+    margin-bottom: 15px;
+  }
+  section#callback .callback-form form input#send {
+    margin-left: 0;
+    width: 90%;
+  }
+  section#contacts h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
+  section#contacts .contacts-info h3,
+  section#contacts .contacts-info a {
+    font-size: 18px;
+  }
+  footer .footer-logo {
+    display: none;
+  }
+  footer .useful {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  footer .useful br {
+    display: none;
+  }
+  footer .useful h3,
+  footer .useful a {
+    margin-left: 5px;
+  }
+  footer .footer-search {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  footer .footer-search h3 {
+    margin-top: 0;
+  }
+  footer .footer-search form {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  .nav-large {
+    display: none;
+  }
+  .nav-small {
+    display: inline-block;
+  }
+  .nav-small .dropdown-menu {
+    left: -80px;
+  }
+  .map {
+    display: none;
+  }
+  header .wrapper {
+    height: auto;
+    padding-right: 18px;
+  }
+  header .wrapper h1 {
+    padding-top: 100px;
+    font-size: 44px;
+  }
+  header .wrapper h2 {
+    font-size: 22px;
+  }
+  header .wrapper button {
+    margin-bottom: 50px;
+    font-size: 16px;
+    padding: 15px 40px 15px 40px;
+  }
+  header .wrapper a {
+    display: none;
+  }
+  section#about #about-left h2 {
+    padding-top: 10px;
+    font-size: 36px;
+  }
+  section#about #about-left h4 {
+    line-height: 1.4;
+  }
+  section#about #about-left h4 br {
+    display: none;
+  }
+  section#about #about-right {
+    display: none;
+  }
+  section#nature h1 {
+    padding-top: 40px;
+    font-size: 36px;
+    line-height: 1;
+  }
+  section#nature h1 br {
+    display: none;
+  }
+  section#nature h4 {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    padding-bottom: 50px;
+  }
+  section#nature h4 br {
+    display: none;
+  }
+  #services__anim {
+    display: none;
+  }
+  section#learn-more {
+    height: 180px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  section#learn-more h1 {
+    font-size: 24px;
+  }
+  section#learn-more button {
+    font-size: 14px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  section#gallery .gallery-head {
+    padding-left: 10px;
+  }
+  section#gallery .gallery-head h1 {
+    font-size: 24px;
+  }
+  section#gallery .gallery-head h4 {
+    font-size: 18px;
+  }
+  section#gallery .gallery-head h4 br {
+    display: none;
+  }
+  section#callback .callback-form {
+    margin-right: 7px;
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+  }
+  section#callback .callback-form h1 {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+  section#callback .callback-form form {
+    padding-left: 0;
+  }
+  section#callback .callback-form form input,
+  section#callback .callback-form form textarea {
+    width: 90%;
+  }
+  section#callback .callback-form form input {
+    margin-bottom: 15px;
+  }
+  section#callback .callback-form form input#send {
+    margin-left: 0;
+    width: 90%;
+  }
+  section#contacts h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
+  section#contacts .contacts-info h3,
+  section#contacts .contacts-info a {
+    font-size: 18px;
+  }
+  section#contacts .map {
+    display: none;
+  }
+  footer .footer-logo {
+    display: none;
+  }
+  footer .useful {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  footer .useful br {
+    display: none;
+  }
+  footer .useful h3,
+  footer .useful a {
+    margin-left: 5px;
+  }
+  footer .footer-search {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  footer .footer-search h3 {
+    margin-top: 0;
+  }
+  footer .footer-search form {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav-large {
+    display: none;
+  }
+  .nav-small {
+    display: inline-block;
+  }
+  .nav-small .dropdown-menu a {
+    font-size: 24px;
+  }
+  header .wrapper h1 {
+    padding-top: 160px;
+    font-size: 64px;
+  }
+  header .wrapper h2 {
+    font-size: 30px;
+  }
+  header .wrapper button {
+    margin-bottom: 120px;
+  }
+  section#about #about-left h2 {
+    padding-top: 50px;
+    font-size: 32px;
+  }
+  section#about #about-left h4 {
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    padding-bottom: 50px;
+  }
+  section#about #about-left h4 br {
+    display: none;
+  }
+  section#about #about-right {
+    display: none;
+  }
+  section#nature h1 {
+    padding-top: 60px;
+    font-size: 24px;
+  }
+  section#nature h4 {
+    padding-bottom: 70px;
+  }
+  #services__anim {
+    display: none;
+  }
+  section#learn-more {
+    height: 180px;
+    padding-top: 40px;
+  }
+  section#learn-more h1 {
+    font-size: 40px;
+  }
+  section#learn-more button {
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-size: 18px;
+    margin-left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  section#learn-more {
+    height: 180px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  section#learn-more h1 {
+    font-size: 36px;
+  }
+  section#learn-more button {
+    font-size: 18px;
+    margin-left: 0;
+  }
+  section#gallery .gallery-head {
+    padding-left: 10px;
+  }
+  section#gallery .gallery-card img {
+    width: 100%;
+    height: auto;
+  }
+  section#callback .callback-form {
+    margin: 70px 40px 50px 40px;
+    padding-top: 10px;
+  }
+  section#callback .callback-form h1 {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+  section#callback .callback-form form {
+    margin: 0 auto;
+  }
+  section#callback .callback-form form input,
+  section#callback .callback-form form textarea {
+    width: 90%;
+  }
+  section#callback .callback-form form input {
+    margin-bottom: 15px;
+  }
+  section#callback .callback-form form input#send {
+    margin-left: 0;
+    width: 90%;
+  }
+  section#contacts h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
+  section#contacts .contacts-info h3,
+  section#contacts .contacts-info a {
+    font-size: 18px;
+  }
+  section#contacts .map {
+    display: none;
+  }
+  footer .footer-logo {
+    display: none;
+  }
+  footer .useful {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  footer .useful br {
+    display: none;
+  }
+  footer .useful h3,
+  footer .useful a {
+    margin-left: 5px;
+  }
+  footer .footer-search {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  footer .footer-search h3 {
+    margin-top: 0;
+  }
+  footer .footer-search form {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .nav-large {
+    display: none;
+  }
+  .nav-small {
+    display: inline-block;
+  }
+  .nav-small .dropdown-menu a {
+    font-size: 24px;
+  }
+  header .wrapper h1 {
+    padding-top: 160px;
+    font-size: 64px;
+  }
+  header .wrapper h2 {
+    font-size: 30px;
+  }
+  header .wrapper button {
+    margin-bottom: 120px;
+  }
+  section#about #about-left h2 {
+    padding-top: 50px;
+    font-size: 32px;
+  }
+  section#about #about-left h4 {
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+  }
+  section#about #about-left h4 br {
+    display: none;
+  }
+  section#about #about-right h1 {
+    padding-top: 55px;
+    font-size: 19px;
+  }
+  section#about #about-right .about-card {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  section#about #about-right .about-card .about-card-inner {
+    font-size: 18px;
+  }
+  section#nature h1 {
+    padding-top: 60px;
+    font-size: 24px;
+  }
+  section#nature h4 {
+    padding-bottom: 70px;
+  }
+  #services__anim {
+    display: none;
+  }
+  section#learn-more {
+    height: 180px;
+    padding-top: 40px;
+  }
+  section#learn-more h1 {
+    font-size: 40px;
+  }
+  section#learn-more button {
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-size: 18px;
+    margin-left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  section#learn-more {
+    height: 120px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  section#learn-more h1 {
+    font-size: 36px;
+  }
+  section#learn-more button {
+    font-size: 18px;
+    margin-left: 0;
+  }
+  section#gallery .gallery-head {
+    padding-left: 10px;
+  }
+  section#gallery .gallery-card img {
+    width: 100%;
+    height: auto;
+  }
+  section#callback .callback-form {
+    margin: 70px 40px 50px 40px;
+    padding-top: 10px;
+  }
+  section#callback .callback-form h1 {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+  section#callback .callback-form form {
+    margin: 0 auto;
+  }
+  section#callback .callback-form form input,
+  section#callback .callback-form form textarea {
+    width: 90%;
+  }
+  section#callback .callback-form form input {
+    margin-bottom: 15px;
+  }
+  section#callback .callback-form form input#send {
+    margin-left: 0;
+    width: 90%;
+  }
+  section#contacts h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
+  section#contacts .contacts-info h3,
+  section#contacts .contacts-info a {
+    font-size: 18px;
+  }
+  section#contacts .map {
+    display: none;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .nav-large .menu-buttons ul li:last-child {
+    display: none;
+  }
+  section#about #about-right .about-card .about-card-inner {
+    font-size: 24px;
+  }
+  section#learn-more h1 {
+    font-size: 44px;
+  }
+  section#gallery .gallery-more,
+  section#gallery .gallery-card {
+    height: 300px;
+  }
+  section#gallery .gallery-more h4,
+  section#gallery .gallery-card h4,
+  section#gallery .gallery-more a,
+  section#gallery .gallery-card a,
+  section#gallery .gallery-more h3,
+  section#gallery .gallery-card h3 {
+    font-size: 18px;
+  }
+}
