@@ -1,0 +1,195 @@
+@media (min-width: 0px) and (max-width: 320px) {
+  nav.visible-xs {
+    display: none;
+  }
+  nav.hidden-xs {
+    display: inherit;
+  }
+  section#slider {
+    padding-top: 50px;
+  }
+  section#slider br {
+    display: none;
+  }
+  section#slider .caption h1 {
+    font-size: 26px;
+  }
+  section#slider .caption button {
+    font-size: 16px;
+  }
+  section#team {
+    padding-top: 50px;
+  }
+  section#team h1 {
+    padding-bottom: 50px;
+  }
+  section#team .card {
+    width: 100%;
+  }
+  section#team .card br {
+    display: none;
+  }
+  section#team .card h3 {
+    padding-top: 40px;
+  }
+  section#team .card h4 {
+    padding-bottom: 20px;
+  }
+  section#offer .offer-block {
+    width: 100%;
+    margin-top: 40px;
+  }
+  footer h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  footer .half {
+    width: 100%;
+  }
+  footer .callback input#name,
+  footer .callback input#email {
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 0;
+  }
+  footer .callback textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  nav.visible-xs {
+    display: none;
+  }
+  nav.hidden-xs {
+    display: inherit;
+  }
+  section#slider {
+    padding-top: 50px;
+  }
+  section#slider .caption br {
+    display: none;
+  }
+  section#slider .caption h1 {
+    font-size: 32px;
+  }
+  section#slider .caption button {
+    font-size: 16px;
+  }
+  section#team {
+    padding-top: 50px;
+  }
+  section#team h1 {
+    padding-bottom: 50px;
+  }
+  section#team .card {
+    width: 100%;
+  }
+  section#team .card br {
+    display: none;
+  }
+  section#team .card h3 {
+    padding-top: 40px;
+  }
+  section#team .card h4 {
+    padding-bottom: 20px;
+  }
+  section#offer .offer-block {
+    width: 100%;
+    margin-top: 40px;
+  }
+  footer h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  footer .half {
+    width: 100%;
+  }
+  footer .callback input#name,
+  footer .callback input#email {
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 0;
+  }
+  footer .callback textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  nav.visible-xs {
+    display: none;
+  }
+  nav.hidden-xs {
+    display: inherit;
+  }
+  section#slider {
+    padding-top: 50px;
+  }
+  section#slider br {
+    display: none;
+  }
+  section#slider .caption h1 {
+    font-size: 32px;
+  }
+  section#team {
+    padding-top: 50px;
+  }
+  section#team h1 {
+    padding-bottom: 50px;
+  }
+  section#team .card {
+    width: 50%;
+  }
+  section#team .card br {
+    display: none;
+  }
+  section#team .card h3 {
+    padding-top: 40px;
+  }
+  section#team .card h4 {
+    padding-bottom: 20px;
+  }
+  section#offer .offer-block {
+    width: 100%;
+    margin-top: 40px;
+  }
+  footer h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  footer .hidden-xs {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 992zpx) {
+  section#team {
+    padding-top: 50px;
+  }
+  section#team h1 {
+    padding-bottom: 50px;
+  }
+  section#team .card {
+    width: 50%;
+  }
+  section#team .card br {
+    display: none;
+  }
+  section#team .card h3 {
+    padding-top: 40px;
+  }
+  section#team .card h4 {
+    padding-bottom: 20px;
+  }
+  section#offer .offer-block {
+    width: 100%;
+    margin-top: 40px;
+  }
+  footer h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  footer .hidden-xs {
+    display: none;
+  }
+}

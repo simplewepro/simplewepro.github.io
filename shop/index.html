@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabby</title>
+    <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_shop.css">
+
+    <script src="js/less.min.js" type="text/javascript"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/animate.css">
+  </head>
+
+  <body>
+    <nav id="top_nav" class="hidden-xs">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2">
+            <a id="logo" href="index.html">  
+              <h2>Tabby</h2>
+              <h5>notebooks</h5>
+            </a>  
+          </div>
+          <div class="col-xs-2 col-sm-offset-2 col-md-offset-3">
+            <a href="shop.html">Shop</a>
+          </div>
+          <div class="col-xs-2">
+            <a href="login.html">Login</a>
+          </div>
+            <div class="col-sm-3 col-md-2">
+              <a href="#">Cart $ (0.00)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="top_nav" class="visible-xs">
+      <div class="row">
+        <div class="col-xs-6">
+          <a id="logo" href="index.html">  
+            <h2>Tabby</h2>
+            <h5>notebooks</h5>
+          </a>  
+        </div>
+        <div class="col-xs-3 col-xs-offset-3 text-center">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Cart $ (0.00)</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="main">
+      <div class="container-fluid">
+        <div class="row">
+          <img src="img/main-bg.jpg" alt="main-bg" class="img-responsive">
+        </div>
+      </div>
+    </section>  
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div id="descript" class="col-lg-10 col-md-9">
+            <a href="#">Subscribe</a>
+            <a href="#">Contact us</a>
+            <a href="#">Questions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div id="social_media" class="col-lg-2 col-md-3">
+            <a href="#" class="wow fadeInRight">
+              <img src="img/social/twitter.png" alt="twitter">
+            </a>
+            <a href="#" class="wow fadeInRight" data-wow-delay="0.2s">
+              <img src="img/social/facebook.png" alt="facebook">
+            </a>
+            <a href="#" class="wow fadeInRight" data-wow-delay="0.4s">
+              <img src="img/social/vk.png" alt="vk">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script>
+      var h_hght = 0; // высота шапки
+      var h_mrg = 0;    // отступ когда шапка уже не видна
+                       
+    $(function(){
+          var elem = $('#top_nav');
+          var top = $(this).scrollTop();
+           
+          if(top > h_hght){
+              elem.css('top', h_mrg);
+          }           
+           
+          $(window).scroll(function(){
+              top = $(this).scrollTop();
+               
+              if (top+h_mrg < h_hght) {
+                  elem.css('top', (h_hght-top));
+              } else {
+                  elem.css('top', h_mrg);
+              }
+          });
+       
+      });
+    </script>
+  </body>
+</html>

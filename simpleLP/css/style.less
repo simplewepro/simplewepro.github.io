@@ -1,0 +1,232 @@
+/*====== Шрифты ======*/
+@font-face {
+    font-family: 'pacifico';
+    src: url('fonts/pacifico.eot');
+    src: url('fonts/pacifico.eot') format('embedded-opentype'),
+         url('fonts/pacifico.woff2') format('woff2'),
+         url('fonts/pacifico.woff') format('woff'),
+         url('fonts/pacifico.ttf') format('truetype'),
+         url('fonts/pacifico.svg#pacifico') format('svg');
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('fonts/RalewayBold.eot');
+    src: url('fonts/RalewayBold.eot') format('embedded-opentype'),
+         url('fonts/RalewayBold.woff2') format('woff2'),
+         url('fonts/RalewayBold.woff') format('woff'),
+         url('fonts/RalewayBold.ttf') format('truetype'),
+         url('fonts/RalewayBold.svg#RalewayBold') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/HelveticaNeue.eot');
+    src: url('fonts/HelveticaNeue.eot') format('embedded-opentype'),
+         url('fonts/HelveticaNeue.woff2') format('woff2'),
+         url('fonts/HelveticaNeue.woff') format('woff'),
+         url('fonts/HelveticaNeue.ttf') format('truetype'),
+         url('fonts/HelveticaNeue.svg#HelveticaNeue') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueItalic';
+    src: url('fonts/HelveticaNeueItalic.eot');
+    src: url('fonts/HelveticaNeueItalic.eot') format('embedded-opentype'),
+         url('fonts/HelveticaNeueItalic.woff2') format('woff2'),
+         url('fonts/HelveticaNeueItalic.woff') format('woff'),
+         url('fonts/HelveticaNeueItalic.ttf') format('truetype'),
+         url('fonts/HelveticaNeueItalic.svg#HelveticaNeueItalic') format('svg');
+}
+
+
+.pacifico{
+	font-family: pacifico;
+}
+
+.helv{
+	font-family: HelveticaNeue;
+}
+
+.helv-italic{
+	font-family: HelveticaNeueItalic;
+}
+
+.raleway{
+	font-family: RalewayBold;
+}
+
+/*====== Базовые настройки ======*/
+
+.btn{
+	background-color: #fff;
+	color: black;
+	border-color: black;
+}
+.btn:hover{
+	background-color: black;
+	border-color: black;
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active{
+	text-decoration: none;
+}
+
+
+/*====== Шапка ======*/
+
+header{
+	background: url(../img/header-bg.jpg) no-repeat center center;
+	background-size: cover;
+	color: white;
+	padding-bottom: 150px;
+	.headline{
+		h1{
+			.pacifico;
+			font-size: 55px;
+			margin-top: 140px;	
+			margin-bottom: 40px;
+			span{
+				color: #2ecc71;
+			}
+		}
+		h4{
+			.helv;
+		}
+		a{
+			background-color: black;
+			display: inline-block;
+			border-radius: 50px;
+			opacity: 0.7;
+			margin-top: 15px;
+			margin-right: 15px;
+		}	
+		a:hover{
+			background-color: #2ecc71;
+			opacity: 1;
+		}
+	}	
+}
+
+/*====== Инфоблок ======*/
+
+section#main{
+	margin-top: 60px;
+	margin-bottom: 60px;
+	.card{
+		img{
+			padding-bottom: 20px;
+		}
+		h4{
+			.raleway;
+		}
+		h6{
+			.helv;
+			color: #848484;
+		}
+	}
+
+}
+
+/*====== Оформление уведомлений ======*/
+
+section#submit_notify{
+	background-color: #e3e3e3;
+	padding-bottom: 100px;
+	.submit_notify{
+		padding-top: 30px;
+		padding-left: 75px;
+		h5{
+			.raleway;
+			margin-bottom: -10px;
+		}
+		h6{
+			.helv;
+			color: #848484;
+		}
+		input{
+			width: 220px;
+			padding: 10px;
+			border-bottom-left-radius: 15px;
+			border-top-left-radius: 15px;
+			border: solid 1px #cccccc;
+			outline: none;	
+		}
+		button{
+			width: 110px;
+			background: #2ecc71;
+			padding: 11px;
+			border: 0px;
+			border-bottom-right-radius: 15px;
+			border-top-right-radius: 15px;
+			color: white;
+			.raleway;
+			outline: none;
+		}
+		.video{
+			margin: 20px;
+			border-radius: 10px;
+
+		}
+	}
+}
+
+/*====== Гетин ======*/
+
+section#getin{
+	.getin-text1{
+		margin-top: 23px;
+		h6{
+			.helv-italic;
+			color: #848484;
+			margin-bottom: -10px;
+		}
+		h5{
+			.raleway;
+		}
+	}
+}
+
+section#getin1{
+
+}
+
+section#getin2{
+	.getin-text2{
+		h3{
+			.raleway;
+			margin-bottom: -10px;
+		}
+		h6{
+			.helv;
+			color: #848484;
+		}
+		.social_media a{
+			background-color: #e3e3e3;
+			display: inline-block;
+			border-radius: 50px;
+			margin-left: 5px;
+		}
+		.social_media a:hover{
+			background-color: #62d995;
+		}
+	}
+	margin-bottom: 40px;
+}
+
+
+/*====== Футер ======*/
+
+footer{
+	padding: 30px;
+	background-color: #e3e3e3;
+	a{
+		color: #848484;
+		margin-left: 10px;
+	}
+}
+
+@import "media.less";

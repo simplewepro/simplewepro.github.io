@@ -1,0 +1,116 @@
+/*======== Шрифты ========*/
+@font-face {
+    font-family: 'GothamProBold';
+    src: url('fonts/GothamProBold.eot');
+    src: url('fonts/GothamProBold.eot') format('embedded-opentype'),
+         url('fonts/GothamProBold.woff2') format('woff2'),
+         url('fonts/GothamProBold.woff') format('woff'),
+         url('fonts/GothamProBold.ttf') format('truetype'),
+         url('fonts/GothamProBold.svg#GothamProBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamProRegular';
+    src: url('fonts/GothamProRegular.eot');
+    src: url('fonts/GothamProRegular.eot') format('embedded-opentype'),
+         url('fonts/GothamProRegular.woff2') format('woff2'),
+         url('fonts/GothamProRegular.woff') format('woff'),
+         url('fonts/GothamProRegular.ttf') format('truetype'),
+         url('fonts/GothamProRegular.svg#GothamProRegular') format('svg');
+}
+
+.bold{
+	font-family: 'GothamProBold';
+}
+.regular{
+    font-family: 'GothamProRegular';
+}
+
+/*======== Базовые настройки ========*/
+
+a:hover,
+a:focus,
+a:visited,
+a:active{
+	text-decoration: none;
+}
+
+a:hover{
+	color: #00baff;
+}
+
+/*======== Header ========*/
+
+nav{
+	text-align: right;
+	position: fixed;
+   	z-index: 1000;
+   	width: 100%;
+   	background-color: #fff;
+	h2{
+		.regular;
+		margin-bottom: -16px;
+		text-transform: uppercase;
+		font-size: 40px;
+		}
+	h5{
+		.bold;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	a#logo{
+		margin-top: 0;
+	}
+	a{
+		.bold;
+		font-size: 17px;
+		color: black;
+		display: inline-block;
+		margin-top: 30px;
+	}
+}
+
+/*======== Main ========*/
+
+section#main{
+	padding-top: 80px;
+}
+
+/*======== Footer ========*/
+
+footer{
+	padding-top: 20px;
+	text-align: right;
+	#descript{
+		padding-top: 8px;
+		a{
+			.bold;
+			color: black;
+			font-size: 14px;
+			display: inline-block;
+			text-transform: uppercase;
+			margin-right: 128px;
+			&:hover{
+				color: #00baff;
+			}
+		}	
+		a:first-child:before{
+			content: "_____________";
+			padding-right: 10px;
+		}
+	}
+	#social_media{
+		a{
+			margin-right: 20px;
+			display: inline-block;
+			background-color: black;
+			border-radius: 20px;
+			&:hover{
+				background-color: #00baff;
+			}
+			img{
+			height: 30px;
+			}
+		}
+	}
+}
+@import "media.less";

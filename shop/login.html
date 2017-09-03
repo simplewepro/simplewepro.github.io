@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabby</title>
+    <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_login.css">
+
+    <script src="js/less.min.js" type="text/javascript"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/animate.css">
+  </head>
+
+  <body>
+     <nav id="top_nav" class="hidden-xs">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2">
+            <a id="logo" href="index.html">  
+              <h2>Tabby</h2>
+              <h5>notebooks</h5>
+            </a>  
+          </div>
+          <div class="col-xs-2 col-sm-offset-2 col-md-offset-3">
+            <a href="shop.html"">Shop</a>
+          </div>
+          <div class="col-xs-2">
+            <a href="login.html" style="color: #00baff;">Login</a>
+          </div>
+            <div class="col-sm-3 col-md-2">
+              <a href="#">Cart $ (0.00)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="top_nav" class="visible-xs">
+      <div class="row">
+        <div class="col-xs-6">
+          <a id="logo" href="index.html">  
+            <h2>Tabby</h2>
+            <h5>notebooks</h5>
+          </a>  
+        </div>
+        <div class="col-xs-3 col-xs-offset-3 text-center">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Cart $ (0.00)</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div id="nav-list" class="col-sm-12">
+            <a href="index.html">Home</a>
+            <i class="fa fa-minus"></i><i class="fa fa-minus" style="margin-left: -2px"></i><i class="fa fa-minus" style="margin-left: -2px"></i> 
+            <a href="#" style="color: #00baff;">Login</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="tabs">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1" title="Вкладка 1">Registration</label>
+         
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2" title="Вкладка 2">Login</label>
+         
+            <section id="content1">
+              <div class="row">
+                <input class="form_input" type="text" required placeholder="First name">
+                <input class="form_input" type="text" required placeholder="Last name">
+              </div>
+              <div class="row">
+                <input class="form_input" type="text" required placeholder="E-mail addres">
+                <input class="form_input" type="text" required placeholder="Password">
+              </div>
+              <div class="row">
+                <button id="reg">Go tabby!</button>
+              </div>
+              <p>Sign up with your e-mail</p>
+              <p>or</p>
+              <div class="row">
+                <a class="reg" href="#"><img src="img/social/vk.png" alt="rg_tw"></a>
+                <a class="reg" href="#"><img src="img/social/facebook.png" alt="rg_fb"></a>
+                <a class="reg" href="#"><img src="img/social/google_plus.png" alt="rg_gp"></a>
+                <a class="reg" href="#"><img src="img/social/twitter.png" alt="rg_tw"></a>
+              </div>
+            </section>  
+            <section id="content2">
+                <div class="row">
+                <input class="form_input" type="text" required placeholder="E-mail addres">
+              </div>
+              <div class="row">
+                <input class="form_input" type="text" required placeholder="Password">
+              </div>
+              <div class="row">
+                <button id="reg">Login</button>
+              </div>
+              <p>or</p>
+              <div class="row">
+                <a class="reg" href="#"><img src="img/social/vk.png" alt="rg_tw"></a>
+                <a class="reg" href="#"><img src="img/social/facebook.png" alt="rg_fb"></a>
+                <a class="reg" href="#"><img src="img/social/google_plus.png" alt="rg_gp"></a>
+                <a class="reg" href="#"><img src="img/social/twitter.png" alt="rg_tw"></a>
+              </div>
+            </section> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div id="descript" class="col-lg-10 col-md-9">
+            <a href="#">Subscribe</a>
+            <a href="#">Contact us</a>
+            <a href="#">Questions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div id="social_media" class="col-lg-2 col-md-3">
+            <a href="#" class="wow fadeInRight">
+              <img src="img/social/twitter.png" alt="twitter">
+            </a>
+            <a href="#" class="wow fadeInRight" data-wow-delay="0.2s">
+              <img src="img/social/facebook.png" alt="facebook">
+            </a>
+            <a href="#" class="wow fadeInRight" data-wow-delay="0.4s">
+              <img src="img/social/vk.png" alt="vk">
+            </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      var h_hght = 0;
+      var h_mrg = 0;   
+    $(function(){
+          var elem = $('#top_nav');
+          var top = $(this).scrollTop();
+          if(top > h_hght){
+              elem.css('top', h_mrg);
+          }           
+           
+          $(window).scroll(function(){
+              top = $(this).scrollTop();
+               
+              if (top+h_mrg < h_hght) {
+                  elem.css('top', (h_hght-top));
+              } else {
+                  elem.css('top', h_mrg);
+              }
+          });
+      });
+    </script>
+  </body>
+</html>
+
+
+<!--section#main>.container>.row>.col-sm-12^+.row*3>.col-sm-4*3>a[href=#]>img[alt=tabby_sample src=img/tabs/#.jpg]^-->

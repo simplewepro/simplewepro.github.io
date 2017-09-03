@@ -1,0 +1,361 @@
+/*====== Шрифты ======*/
+@font-face {
+    font-family: 'pacifico';
+    src: url('fonts/pacifico.eot');
+    src: url('fonts/pacifico.eot') format('embedded-opentype'),
+         url('fonts/pacifico.woff2') format('woff2'),
+         url('fonts/pacifico.woff') format('woff'),
+         url('fonts/pacifico.ttf') format('truetype'),
+         url('fonts/pacifico.svg#pacifico') format('svg');
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('fonts/RalewayBold.eot');
+    src: url('fonts/RalewayBold.eot') format('embedded-opentype'),
+         url('fonts/RalewayBold.woff2') format('woff2'),
+         url('fonts/RalewayBold.woff') format('woff'),
+         url('fonts/RalewayBold.ttf') format('truetype'),
+         url('fonts/RalewayBold.svg#RalewayBold') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/HelveticaNeue.eot');
+    src: url('fonts/HelveticaNeue.eot') format('embedded-opentype'),
+         url('fonts/HelveticaNeue.woff2') format('woff2'),
+         url('fonts/HelveticaNeue.woff') format('woff'),
+         url('fonts/HelveticaNeue.ttf') format('truetype'),
+         url('fonts/HelveticaNeue.svg#HelveticaNeue') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueItalic';
+    src: url('fonts/HelveticaNeueItalic.eot');
+    src: url('fonts/HelveticaNeueItalic.eot') format('embedded-opentype'),
+         url('fonts/HelveticaNeueItalic.woff2') format('woff2'),
+         url('fonts/HelveticaNeueItalic.woff') format('woff'),
+         url('fonts/HelveticaNeueItalic.ttf') format('truetype'),
+         url('fonts/HelveticaNeueItalic.svg#HelveticaNeueItalic') format('svg');
+}
+
+
+.pacifico{
+	font-family: pacifico;
+}
+
+.helv{
+	font-family: HelveticaNeue;
+}
+
+.helv-italic{
+	font-family: HelveticaNeueItalic;
+}
+
+.raleway{
+	font-family: RalewayBold;
+}
+
+
+/*======== Адаптив ========*/
+
+@media(min-width: 0px) and (max-width: 320px) {
+	section#header{
+		background: url(../img/header-bg.jpg) no-repeat center center;
+		background-size: cover;
+		padding-bottom: 35px;
+		.headline{
+			color: white;
+			h1{
+				.pacifico;
+				font-size: 50px;
+				margin-top: 30px;	
+				margin-bottom: 50px;
+				margin-left: 20px;
+				span{
+					color: #2ecc71;
+				}
+			}
+			h4{
+				.helv;
+				background: rgba(0, 0, 0, 0.8);
+				background-size: cover;
+				padding: 5px 5px 10px;
+				opacity: 0.9;
+			}
+		}
+		.mobile_icons{
+			padding-top: 15px;
+			padding-left: 30px;
+			a{
+				background-color: black;
+				display: inline-block;
+				border-radius: 50px;
+				opacity: 0.8;
+			}	
+			a:hover{
+				background-color: #2ecc71;
+				opacity: 1;
+			}
+		}
+	}
+
+	section#main{
+		margin-top: 0;
+		.card{
+			img{
+				margin-top: 30px;
+				padding-bottom: 10px;
+			}
+			h4{
+				.raleway;
+			}
+			h6{
+				.helv;
+				color: #848484;
+			}
+		}
+	}
+	
+	section#submit_notify{
+		padding-bottom: 30px;
+		.submit_notify{
+			padding-left: 0;
+			h5{
+				font-size: 19px;
+			}
+			h6{
+				font-size: 12px;
+			}
+			input{
+				width: 65%;
+			}
+			button{
+				width: 32%
+			}
+			iframe{
+				padding-top: 15px;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	section#getin1{
+
+	}
+}
+
+@media(min-width:321px) and (max-width:480px) {
+	section#header{
+		background: url(../img/header-bg.jpg) no-repeat center center;
+		background-size: cover;
+		padding-bottom: 35px;
+		.headline{
+			color: white;
+			h1{
+				.pacifico;
+				font-size: 50px;
+				margin-top: 30px;	
+				margin-bottom: 50px;
+				margin-left: 20px;
+				span{
+					color: #2ecc71;
+				}
+			}
+			h4{
+				.helv;
+				background: rgba(0, 0, 0, 0.8);
+				background-size: cover;
+				padding: 5px 5px 10px;
+				opacity: 0.9;
+			}
+		}
+		.mobile_icons{
+			padding-top: 15px;
+			padding-left: 50px;
+			a{
+				padding: 7px;
+				background-color: #272727;
+				display: inline-block;
+				border-radius: 50px;
+				opacity: 0.8;
+			}	
+			a:hover{
+				background-color: #2ecc71;
+				opacity: 1;
+			}
+		}
+	}
+	section#main{
+		margin-top: 0;
+		.card{
+			img{
+				margin-top: 30px;
+				padding-bottom: 10px;
+			}
+			h4{
+				.raleway;
+				font-size: 22px;
+			}
+			h6{
+				.helv;
+				font-size: 17px;
+				color: #848484;
+			}
+		}
+	}
+	section#submit_notify{
+		padding-bottom: 30px;
+		.submit_notify{
+			padding-left: 0;
+			h5{
+				font-size: 19px;
+			}
+			h6{
+				font-size: 12px;
+			}
+			input{
+				width: 65%;
+			}
+			button{
+				width: 32%
+			}
+			iframe{
+				padding-top: 15px;
+				width: 100%;			}
+		}
+	}	
+}
+
+@media(min-width:481px) and (max-width:768px) {
+	section#header{
+		background: url(../img/header-bg.jpg) no-repeat center center;
+		background-size: cover;
+		padding-bottom: 35px;
+		.headline{
+			color: white;
+			h1{
+				.pacifico;
+				font-size: 50px;
+				margin-top: 30px;	
+				margin-bottom: 50px;
+				margin-left: 20px;
+				span{
+					color: #2ecc71;
+				}
+			}
+			h4{
+				.helv;
+				background: rgba(0, 0, 0, 0.8);
+				background-size: cover;
+				padding: 5px 5px 10px;
+				opacity: 0.9;
+			}
+		}
+		.mobile_icons{
+			padding-top: 15px;
+			padding-left: 100px;
+			a{
+				padding: 7px;
+				background-color: #272727;
+				display: inline-block;
+				border-radius: 50px;
+				opacity: 0.8;
+			}	
+			a:hover{
+				background-color: #2ecc71;
+				opacity: 1;
+			}
+		}
+	}
+	section#main{
+		margin-top: 0;
+		.card{
+			img{
+				margin-top: 30px;
+				padding-bottom: 10px;
+			}
+			h4{
+				.raleway;
+				font-size: 22px;
+			}
+			h6{
+				.helv;
+				font-size: 17px;
+				color: #848484;
+			}
+		}
+	}
+	section#submit_notify{
+		padding-bottom: 30px;
+		.submit_notify{
+			padding-left: 0;
+			h5{
+				font-size: 19px;
+			}
+			h6{
+				font-size: 12px;
+			}
+			input{
+				width: 60%;
+			}
+			button{
+				width: 30%
+			}
+			iframe{
+				padding-top: 15px;
+				width: 100%;
+			}
+		}
+	}	
+}
+
+@media(min-width:769px) and (max-width:992px) {
+	section#submit_notify{
+		padding-bottom: 30px;
+		.submit_notify{
+			padding-left: 0;
+			h5{
+				font-size: 19px;
+			}
+			h6{
+				font-size: 12px;
+			}
+			input{
+				width: 60%;
+			}
+			button{
+				width: 30%
+			}
+			iframe{
+				padding-top: 15px;
+				width: 100%;
+			}
+		}
+	}		
+}
+
+@media(min-width:993px) and (max-width:1200px) {
+	section#submit_notify{
+		padding-bottom: 30px;
+		.submit_notify{
+			padding-left: 0;
+			h5{
+				font-size: 19px;
+			}
+			h6{
+				font-size: 12px;
+			}
+			input{
+				width: 60%;
+			}
+			button{
+				width: 30%
+			}
+			iframe{
+				padding-top: 15px;
+				width: 100%;
+			}
+		}
+	}	
+}
