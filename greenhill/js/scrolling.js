@@ -6,13 +6,9 @@ $(document).ready(function(){
 	    return false;
 	});
 	
-	menuCollapse();	
+	//menuCollapse();	
 	$(window).on('resize', function(){menuCollapse();});
 	$('#menu').click(function(){$('#nav').slideToggle();});
-
-	$('.carousel-slide').sliderArrow({
-		next_slides : 3000
-	});
 });
 
 function services0(){
@@ -70,4 +66,16 @@ if ($(window).scrollTop() > 280) {
 else {
   $('.nav-small').removeClass('scroll-small')
 }
+});
+
+
+// Parallax
+
+$(window).scroll(function() {
+
+	var st = $(this).scrollTop();
+
+	$(".header_text").css({
+		"transform" : "translate(0%, " + st/16 + "%"
+	});
 });

@@ -33,6 +33,19 @@
   </head>
 
   <body>
+  
+  <div id="page_preloader" class="preloader">
+    <div class="loader">
+      <span id="load_perc">0%</span>
+    </div>
+  </div>
+
+  <!--div id="page_preloader" class="preloader">
+    <div class="loader">
+      <img src="img/preloader.png" alt="pre">
+    </div>
+  </div-->
+
     <nav class="nav nav-large">
       <div class="container">
         <div class="row">
@@ -43,7 +56,7 @@
             <ul>  
               <li><a href="#header">Главная</a></li>
               <li><a href="#about">О нас</a></li>
-              <li><a href="#services">Услуги</a></li>
+              <li><a href="#services__anim">Услуги</a></li>
               <li><a href="#gallery">Фотогалерея</a></li>
               <li><a href="#contacts">Контакты</a> </li>
             </ul>
@@ -77,17 +90,15 @@
       </div>
     </nav>
 
-    <header id="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 wrapper">
-            <h1>Зелёная<br>горка</h1>
-            <h2>Лагерь мечты</h2>
-            <button><b>Подробнее >></b></button><br>
-            <a href="#about" class="scroll-down fa fa-angle-down"></a>
-          </div>
+    <header id="header" class="parallax-window" data-parallax="scroll" data-image-src="img/header-bg.jpg" speed="0.4">
+      <div class="wrapper">
+        <div class="header_text">
+          <h1>Зелёная<br>горка</h1>
+          <h2>Лагерь мечты</h2>
+          <button class=><b>Подробнее >></b></button><br>
         </div>
       </div>
+      <a href="#about" class="scroll-down fa fa-angle-down"></a>
     </header>
     
     <section id="about">
@@ -115,7 +126,7 @@
       </div>
     </section>
 
-    <section id="nature">
+    <section id="nature" class="parallax-window" data-parallax="scroll" data-image-src="img/nature-bg.jpg" speed="0.4">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -420,7 +431,7 @@
       </section>    
     </div-->
 
-    <section id="learn-more">
+    <section id="learn-more" class="parallax-window" data-parallax="scroll" data-image-src="img/contactus-bg.jpg" speed="0.4">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-xs-12">
@@ -618,7 +629,7 @@
             <img src="img/gallery/gallery6.jpg" alt="photo">
             <img src="img/gallery/header-bg.jpg" alt="photo">
           </div>
-          <a href="javascript:void(0);" class="more">Больше фото в альбоме ВК<i class="fa fa-arrow-right"></a>
+          <a href="javascript:void(0);" class="more">Больше фото в альбоме ВК <i class="fa fa-arrow-right"></a>
         </div>
       </div>
     </section>
@@ -628,5 +639,7 @@
     <script>
      new WOW().init();
     </script>
+    <script src="js/preloader.js"></script>
+    <script src="js/parallax.min.js"></script>
   </body>
 </html>
