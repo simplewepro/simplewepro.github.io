@@ -41,6 +41,13 @@ section#slider .caption button {
   cursor: pointer;
   margin-bottom: 100px;
 }
+section#slider .caption button:hover {
+	background: #fff;
+	color: #49cbcd;
+}
+section#slider .caption button:active {
+	color: #4286f4;
+}
 .caption {
 	margin-top: 100px;
 	text-align: center;
