@@ -73,27 +73,9 @@ input{
 button{
 	cursor: pointer;
 }
-button:active{
-	color: #fff;
-	background: rgba(255, 255, 255, 0);
-}
 button{
-	background: #abe35c;
-	background: linear-gradient(to top, #9ad456, #bff267);
-	box-shadow: 0px 2px 10px 1px;
-	.georgia;
-	text-transform: uppercase;
-	font-size: 22px;
-	letter-spacing: 0.3px;
-	padding: 17px 50px 16px 50px;
-	border-radius: 20px;
-	border: 2px solid #abe35c;
+	border: none;
 }
-button:hover{
-	color: #fff;
-	box-shadow: none;
-}
-
 a:hover,
 a:focus,
 a:visited,
@@ -104,6 +86,7 @@ a:active{
 /*====== Навбар ======*/
 
 .small-nav{
+	z-index: 90;
 	width: 100%;
 	background: #efefef;
 	.hamburger{
@@ -144,7 +127,6 @@ a:active{
 				width: 200px;
 				height: 100vh;
 				background: #abb88e;
-				box-shadow: 3px 0px 2px 2px #000;
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -185,6 +167,7 @@ a:active{
 			opacity: 1;
 			visibility: visible;
 			transform: translateX(-200px);
+			//-webkit-backdrop-filter: blur(5px);
 		}
 	}
 }
@@ -197,5 +180,26 @@ header{
 	font-size: 42px;
 	padding-top: 40vh;
 }
+.div-for-one-button{
+	width: 100%;
+	padding-top: 50px;
+	text-align: center;
+	.butt{
+		width: 200px;
+		height: 50px;
+		text-align: center;
+		text-transform: uppercase;
+		.georgia;
+		font-size: 18px;
+		background: #fde858;
+		border-radius: 6px;
+		border-bottom: 3px solid #d1b044;
+		&:active{
+			border-top: 2px solid rgba(255, 255, 255, 1);
+			border-bottom: 1px solid #d1b044;
+		}
+	}
+}
+
 
 @import "media.less";

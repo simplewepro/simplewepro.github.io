@@ -36,3 +36,8 @@ $(document).ready(function(){
     $(this).toggleClass("is-active");
   });
 });
+$(document).ready(function(){
+  $(".menu").click(function(){
+    $('.hamburger').toggleClass("is-active");
+  });
+});
