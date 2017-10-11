@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'GTAmericaBold';
+    src: url('fonts/GTAmericaBold.eot');
+    src: url('fonts/GTAmericaBold.eot') format('embedded-opentype'),
+         url('fonts/GTAmericaBold.woff2') format('woff2'),
+         url('fonts/GTAmericaBold.woff') format('woff'),
+         url('fonts/GTAmericaBold.ttf') format('truetype'),
+         url('fonts/GTAmericaBold.svg#GTAmericaBold') format('svg');
+}
+@font-face {
+    font-family: 'GTAmericaExpandedBlack';
+    src: url('fonts/GTAmericaExpandedBlack.eot');
+    src: url('fonts/GTAmericaExpandedBlack.eot') format('embedded-opentype'),
+         url('fonts/GTAmericaExpandedBlack.woff2') format('woff2'),
+         url('fonts/GTAmericaExpandedBlack.woff') format('woff'),
+         url('fonts/GTAmericaExpandedBlack.ttf') format('truetype'),
+         url('fonts/GTAmericaExpandedBlack.svg#GTAmericaExpandedBlack') format('svg');
+}
+@font-face {
+    font-family: 'GTAmericaExpandedRegular';
+    src: url('fonts/GTAmericaExpandedRegular.eot');
+    src: url('fonts/GTAmericaExpandedRegular.eot') format('embedded-opentype'),
+         url('fonts/GTAmericaExpandedRegular.woff2') format('woff2'),
+         url('fonts/GTAmericaExpandedRegular.woff') format('woff'),
+         url('fonts/GTAmericaExpandedRegular.ttf') format('truetype'),
+         url('fonts/GTAmericaExpandedRegular.svg#GTAmericaExpandedRegular') format('svg');
+}
+@font-face {
+    font-family: 'GTAmericaExpandedBold';
+    src: url('fonts/GTAmericaExpandedBold.eot');
+    src: url('fonts/GTAmericaExpandedBold.eot') format('embedded-opentype'),
+         url('fonts/GTAmericaExpandedBold.woff2') format('woff2'),
+         url('fonts/GTAmericaExpandedBold.woff') format('woff'),
+         url('fonts/GTAmericaExpandedBold.ttf') format('truetype'),
+         url('fonts/GTAmericaExpandedBold.svg#GTAmericaExpandedBold') format('svg');
+}
