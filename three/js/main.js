@@ -108,7 +108,7 @@ window.onload = function(){
 	mesh.position.set(-50, -140, -220);
 	scene.add(mesh);
 
-	var geometry = new THREE.CubeGeometry(50, 20,  20, 1,1, 1);
+	var geometry = new THREE.CubeGeometry(50, 20, 20, 1,1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.2 * Math.PI;
@@ -122,14 +122,14 @@ window.onload = function(){
 	mesh.position.set(-200, 400, -20);
 	scene.add(mesh);
 
-	var geometry = new THREE.CubeGeometry(50, 20,  20, 1,1, 1);
+	var geometry = new THREE.CubeGeometry(50, 20, 20, 1,1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.2 * Math.PI;
 	mesh.position.set(280, 300, -500);
 	scene.add(mesh);
 
-	var geometry = new THREE.CubeGeometry(20, 20,  20, 1,1, 1);
+	var geometry = new THREE.CubeGeometry(20, 20, 20, 1,1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.7 * Math.PI;
