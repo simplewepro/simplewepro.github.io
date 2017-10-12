@@ -19,7 +19,7 @@ window.onload = function(){
 	var scene = new THREE.Scene();
 	
 	var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 5000);
-	camera.position.z = 1800;
+	camera.position.z = 1400;
 	
 	var light = new THREE.AmbientLight(0xffffff);
 	scene.add(light);
@@ -28,112 +28,112 @@ window.onload = function(){
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.2 * Math.PI;
-	mesh.position.set(20, 180, -400);
+	mesh.position.set(40, 200, -400);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(220, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.2 * Math.PI;
-	mesh.position.set(360, 80, -100);
+	mesh.position.set(380, 100, -100);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(140, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.84 * Math.PI;
-	mesh.position.set(600, 140, -200);
+	mesh.position.set(620, 160, -200);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(340, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.7 * Math.PI;
-	mesh.position.set(900, 120, -300);
+	mesh.position.set(920, 140, -300);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(140, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.7 * Math.PI;
-	mesh.position.set(400, -80, 300);
+	mesh.position.set(420, -100, 300);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(140, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.6 * Math.PI;
-	mesh.position.set(300, -180, -300);
+	mesh.position.set(320, -200, -300);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(140, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.57 * Math.PI;
-	mesh.position.set(150, -400, -500);
+	mesh.position.set(170, -420, -500);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(160, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.65 * Math.PI;
-	mesh.position.set(-600, 400, -400);
+	mesh.position.set(-620, 420, -400);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(160, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.8 * Math.PI;
-	mesh.position.set(-900, 160, -460);
+	mesh.position.set(-920, 180, -460);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(160, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.7 * Math.PI;
-	mesh.position.set(-560, 200, -100);
+	mesh.position.set(-580, 220, -100);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(160, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.26 * Math.PI;
-	mesh.position.set(-720, -150, -200);
+	mesh.position.set(-740, -170, -200);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(120, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.7 * Math.PI;
-	mesh.position.set(-50, -140, -220);
+	mesh.position.set(-70, -160, -220);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(50, 20, 20, 1,1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.2 * Math.PI;
-	mesh.position.set(-200, 40, 0);
+	mesh.position.set(-220, 60, 0);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(130, 20, 20, 1, 1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.15 * Math.PI;
-	mesh.position.set(-200, 400, -20);
+	mesh.position.set(-220, 420, -20);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(50, 20, 20, 1,1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.2 * Math.PI;
-	mesh.position.set(280, 300, -500);
+	mesh.position.set(300, 320, -500);
 	scene.add(mesh);
 
 	var geometry = new THREE.CubeGeometry(20, 20, 20, 1,1, 1);
 	var material = new THREE.MeshBasicMaterial({color: 0x000000});
 	var mesh = new THREE.Mesh(geometry, material);
 	mesh.rotation.z = 0.7 * Math.PI;
-	mesh.position.set(220, 480, -300);
+	mesh.position.set(240, 500, -300);
 	scene.add(mesh);
 
 
