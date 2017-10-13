@@ -77,6 +77,7 @@ header{
 		width: 100%;
 		background: #ececec;
 		position: absolute;
+		-webkit-animation: kotra-reveal 2s cubic-bezier(.21,.69,.23,.51);
 		animation: kotra-reveal 2s cubic-bezier(.21,.69,.23,.51);
 		transform: translateY(-100%);
 	}
@@ -96,12 +97,14 @@ header{
 .contact-us{
 	top: 0;
 	left: 0;
+	-webkit-animation: contact-us-reveal 5s cubic-bezier(.04,.21,.03,.9);
 	animation: contact-us-reveal 5s cubic-bezier(.04,.21,.03,.9);
 }
 .close-butt{
 	top: 0;
 	right: 0;
 	transform: translateY(-100%);
+	-webkit-animation: close-butt-reveal 5s cubic-bezier(.04,.21,.03,.9);
 	animation: close-butt-reveal 5s cubic-bezier(.04,.21,.03,.9);
 }
 .reg-form-wrapper{
@@ -112,6 +115,7 @@ header{
 	bottom: 0;
 	right: 0;
 	position: absolute;
+	-webkit-animation: regform-reveal 4s cubic-bezier(.04,.21,.03,.9);
 	animation: regform-reveal 4s cubic-bezier(.04,.21,.03,.9);
 
 }
@@ -201,6 +205,63 @@ header{
 }
 
 @keyframes close-butt-reveal{
+	from{
+		clip: rect(40px, auto, 40px, auto);
+	}
+	80%{
+		clip: rect(40px, auto, 40px, auto);
+	}
+	to{
+		clip: rect(0, auto, 40px, auto);	
+	}
+}
+/*webkit for*/
+@-webkit-keyframes kotra-reveal{
+	from{
+		transform: translateY(0%);
+	}
+	to{
+		transform: translateY(-100%);
+	}
+}
+
+@-webkit-keyframes kotra-raise{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1.05);
+	}
+}
+
+@-webkit-keyframes regform-reveal{
+	from{
+		clip: rect(auto, 100vw, auto, 100vw);
+	}
+	50%{
+		clip: rect(auto, 100vw, auto, 100vw);
+	}
+	to{
+		clip: rect(auto, 100vw, auto, 0vw);
+	}
+}
+
+@-webkit-keyframes contact-us-reveal{
+	from{
+		clip: rect(0, auto, 0, auto);
+	}
+	80%{
+		clip: rect(0, auto, 0, auto);	
+	}
+	to{
+		clip: rect(0, auto, 40px, auto);	
+	}
+}
+
+@-webkit-keyframes close-butt-reveal{
 	from{
 		clip: rect(40px, auto, 40px, auto);
 	}
