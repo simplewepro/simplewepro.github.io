@@ -68,6 +68,7 @@ header{
 	font-size: 23vw;
 	letter-spacing: 3vw;
 	text-align: center;
+	transform: scale(1);
 	animation: kotra-raise 4s linear;
 	transform: scale(1.05);
 	&::before{
@@ -76,7 +77,7 @@ header{
 		width: 100%;
 		background: #ececec;
 		position: absolute;
-		animation: kotra-reveal 2s cubic-bezier(0, 0.7, 0.9, 1);
+		animation: kotra-reveal 2s cubic-bezier(.21,.69,.23,.51);
 		transform: translateY(-100%);
 	}
 }
@@ -95,13 +96,13 @@ header{
 .contact-us{
 	top: 0;
 	left: 0;
-	animation: contact-us-reveal 5s linear;
+	animation: contact-us-reveal 5s cubic-bezier(.04,.21,.03,.9);
 }
 .close-butt{
 	top: 0;
 	right: 0;
 	transform: translateY(-100%);
-	animation: close-butt-reveal 5s linear;
+	animation: close-butt-reveal 5s cubic-bezier(.04,.21,.03,.9);
 }
 .reg-form-wrapper{
 	height: 50vh;
@@ -111,7 +112,7 @@ header{
 	bottom: 0;
 	right: 0;
 	position: absolute;
-	animation: regform-reveal 4s ease;
+	animation: regform-reveal 4s cubic-bezier(.04,.21,.03,.9);
 
 }
 .reg-form{
