@@ -68,8 +68,7 @@ header{
 	font-size: 23vw;
 	letter-spacing: 3vw;
 	text-align: center;
-	transform: scale(1);
-	animation: kotra-raise 4s linear;
+	animation: kotra-raise-delay 2s linear, kotra-raise 2s linear 2s;
 	transform: scale(1.05);
 	&::before{
 		content: '';
@@ -97,15 +96,15 @@ header{
 .contact-us{
 	top: 0;
 	left: 0;
-	-webkit-animation: contact-us-reveal 5s cubic-bezier(.04,.21,.03,.9);
-	animation: contact-us-reveal 5s cubic-bezier(.04,.21,.03,.9);
+	-webkit-animation: whitebutt-delay 4.5s, contact-us-reveal 0.7s cubic-bezier(.04,.21,.03,.9) 4.5s;
+	animation: whitebutt-delay 4.5s, contact-us-reveal 0.7s cubic-bezier(.04,.21,.03,.9) 4.5s;
 }
 .close-butt{
 	top: 0;
 	right: 0;
 	transform: translateY(-100%);
-	-webkit-animation: close-butt-reveal 5s cubic-bezier(.04,.21,.03,.9);
-	animation: close-butt-reveal 5s cubic-bezier(.04,.21,.03,.9);
+	-webkit-animation: whitebutt-delay 4.5s, close-butt-reveal 1s ease 4.5s;
+	animation: whitebutt-delay 4.5s, close-butt-reveal 1s ease 4.5s;
 }
 .reg-form-wrapper{
 	height: 50vh;
@@ -115,8 +114,8 @@ header{
 	bottom: 0;
 	right: 0;
 	position: absolute;
-	-webkit-animation: regform-reveal 4s cubic-bezier(.04,.21,.03,.9);
-	animation: regform-reveal 4s cubic-bezier(.04,.21,.03,.9);
+	-webkit-animation: regform-delay 2s linear, regform-reveal 2s cubic-bezier(.5,.12,.11,.72) 2s;
+	animation: regform-delay 2s linear, regform-reveal 2s cubic-bezier(.5,.12,.11,.72) 2s;
 
 }
 .reg-form{
@@ -158,118 +157,6 @@ header{
 
 
 /*====== Animations ======*/
-
-@keyframes kotra-reveal{
-	from{
-		transform: translateY(0%);
-	}
-	to{
-		transform: translateY(-100%);
-	}
-}
-
-@keyframes kotra-raise{
-	from{
-		transform: scale(1);
-	}
-	50%{
-		transform: scale(1);
-	}
-	to{
-		transform: scale(1.05);
-	}
-}
-
-@keyframes regform-reveal{
-	from{
-		clip: rect(auto, 100vw, auto, 100vw);
-	}
-	50%{
-		clip: rect(auto, 100vw, auto, 100vw);
-	}
-	to{
-		clip: rect(auto, 100vw, auto, 0vw);
-	}
-}
-
-@keyframes contact-us-reveal{
-	from{
-		clip: rect(0, auto, 0, auto);
-	}
-	80%{
-		clip: rect(0, auto, 0, auto);	
-	}
-	to{
-		clip: rect(0, auto, 40px, auto);	
-	}
-}
-
-@keyframes close-butt-reveal{
-	from{
-		clip: rect(40px, auto, 40px, auto);
-	}
-	80%{
-		clip: rect(40px, auto, 40px, auto);
-	}
-	to{
-		clip: rect(0, auto, 40px, auto);	
-	}
-}
-/*webkit for*/
-@-webkit-keyframes kotra-reveal{
-	from{
-		transform: translateY(0%);
-	}
-	to{
-		transform: translateY(-100%);
-	}
-}
-
-@-webkit-keyframes kotra-raise{
-	from{
-		transform: scale(1);
-	}
-	50%{
-		transform: scale(1);
-	}
-	to{
-		transform: scale(1.05);
-	}
-}
-
-@-webkit-keyframes regform-reveal{
-	from{
-		clip: rect(auto, 100vw, auto, 100vw);
-	}
-	50%{
-		clip: rect(auto, 100vw, auto, 100vw);
-	}
-	to{
-		clip: rect(auto, 100vw, auto, 0vw);
-	}
-}
-
-@-webkit-keyframes contact-us-reveal{
-	from{
-		clip: rect(0, auto, 0, auto);
-	}
-	80%{
-		clip: rect(0, auto, 0, auto);	
-	}
-	to{
-		clip: rect(0, auto, 40px, auto);	
-	}
-}
-
-@-webkit-keyframes close-butt-reveal{
-	from{
-		clip: rect(40px, auto, 40px, auto);
-	}
-	80%{
-		clip: rect(40px, auto, 40px, auto);
-	}
-	to{
-		clip: rect(0, auto, 40px, auto);	
-	}
-}
+@import "animation.less";
+/*====== Adaptive ======*/
 @import "media.less";

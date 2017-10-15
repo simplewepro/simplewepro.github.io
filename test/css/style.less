@@ -52,6 +52,10 @@ body{
 	margin: 0;
 	box-sizing: border-box;
 }
+a{
+  color: #fff;
+}
+
 .hidden{
 	display: none;
 }
@@ -201,5 +205,138 @@ header{
 	}
 }
 
+.add-butt-wrapper{
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	left: 70px;
+	height: 100px;
+	width: 100px;
+	text-aligh: center;
 
+	border-radius: 18px;
+	
+	&::before{
+		content: '';
+		background: #fff;
+		z-index: 10;
+		height: 32px;
+		width: 8px;
+		position: absolute;
+		top: 34px;
+		left: 46px;
+		border-radius: 5px;
+	}
+
+	&::after{
+		content: '';
+		background: #fff;
+		z-index: 10;
+		height: 8px;
+		width: 32px;
+		position: absolute;
+		top: 46px;
+		left: 34px;
+		border-radius: 5px;
+	}
+
+	transition: 0.1s;
+	&:hover{
+		transform: rotate(45deg);
+		&>a{
+			animation: add-butt-hover .8s ease;
+			margin: 5px;
+			border-radius: 22px;
+			transition: .2s;
+			transition-delay: .45s;
+			&>i{
+				animation: add-butt-icons .8s linear;
+				transform: rotate(-45deg);
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+}
+.add-butt{
+	display: inline-block;
+	float: left;
+
+	height: 50px;
+	width: 50px;
+	padding-top: 15px;
+	
+	background: #11b7c1;
+	color: #fff;
+	text-align: center;
+
+	transition: 0.1s;
+}
+//Button positioning
+	//first
+	.add-butt:nth-child(1){
+		position: absolute;
+		right: 50%;
+		bottom: 50%;
+		border-radius: 15px 0 0 0;
+	}
+	//second
+	.add-butt:nth-child(2){
+		position: absolute;
+		left: 50%;
+		bottom: 50%;
+		border-radius: 0 15px 0 0;
+	}
+	//third
+	.add-butt:nth-child(3){
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		border-radius: 0 0 15px 0;
+	}
+	//fourth
+	.add-butt:nth-child(4){
+		position: absolute;
+		right: 50%;
+		top: 50%;
+		border-radius: 0 0 0 15px;
+	}
+	//end
+
+.add-butt>i{
+	color: rgba(255, 255, 255, 0);
+}
+
+
+@keyframes add-butt-hover{
+	from{
+		height: 50px;
+		width: 50px;
+	}
+	60%{
+		height: 30px;
+		width: 30px;
+	}
+	75%{
+		height: 52px;
+		width: 52px;
+		margin: 7px;
+	}
+	to{
+		height: 50px;
+		width: 50px;
+		margin: 5px;
+	}
+}
+
+@keyframes add-butt-icons{
+	from{
+		color: rgba(255, 255, 255, 0);
+	}
+	60%{
+		color: rgba(255, 255, 255, 0);	
+	}
+	to{
+		color: rgba(255, 255, 255, 1);
+	}
+}
 @import "media.less";
