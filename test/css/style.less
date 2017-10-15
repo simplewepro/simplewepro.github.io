@@ -244,12 +244,14 @@ header{
 	&:hover{
 		transform: rotate(45deg);
 		&>a{
+			-webkit-animation: add-butt-hover .8s ease;
 			animation: add-butt-hover .8s ease;
 			margin: 5px;
 			border-radius: 22px;
 			transition: .2s;
 			transition-delay: .45s;
 			&>i{
+				-webkit-animation: add-butt-icons .8s linear;
 				animation: add-butt-icons .8s linear;
 				transform: rotate(-45deg);
 				color: rgba(255, 255, 255, 1);
@@ -339,4 +341,41 @@ header{
 		color: rgba(255, 255, 255, 1);
 	}
 }
+
+
+/*====== Webkit for ======*/
+
+@-webkit-keyframes add-butt-hover{
+	from{
+		height: 50px;
+		width: 50px;
+	}
+	60%{
+		height: 30px;
+		width: 30px;
+	}
+	75%{
+		height: 52px;
+		width: 52px;
+		margin: 7px;
+	}
+	to{
+		height: 50px;
+		width: 50px;
+		margin: 5px;
+	}
+}
+
+@keyframes add-butt-icons{
+	from{
+		color: rgba(255, 255, 255, 0);
+	}
+	60%{
+		color: rgba(255, 255, 255, 0);	
+	}
+	to{
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
 @import "media.less";
