@@ -55,7 +55,6 @@ header{
 .central-logo-wrapper{
 	z-index: 1;
 	background: #ececec;
-	padding-top: 26vh;
 	position: absolute;
 	height: 100vh;
 	width: 100vw;
@@ -63,14 +62,16 @@ header{
 .central-logo{
 	overflow: hidden;
 	position: relative;
+	top: 30%;
+	transform: translateY(-50%);
 	.gotham;
 	text-transform: uppercase;
 	font-size: 23vw;
 	line-height: 23vw;
 	letter-spacing: 3vw;
 	text-align: center;
-	-webkit-animation: kotra-raise-delay 1s, kotra-raise 1s ease 1s;
-	animation: kotra-raise-delay 1s, kotra-raise 1s ease 1s;
+	-webkit-animation: kotra-raise-delay 2s, kotra-raise 1s ease 2s;
+	animation: kotra-raise-delay 2s, kotra-raise 1s ease 2s;
 	transform: scale(1.05);
 	clip: rect(500px, auto, auto, auto);
 	&::before{
@@ -79,8 +80,8 @@ header{
 		width: 100%;
 		background: #ececec;
 		position: absolute;
-		-webkit-animation: kotra-reveal 1s cubic-bezier(0.8, 0.01, 0.11, 1);
-		animation: kotra-reveal 1s cubic-bezier(0.8, 0.01, 0.11, 1);
+		-webkit-animation: kotra-reveal 2s cubic-bezier(0.8, 0.01, 0.11, 1);
+		animation: kotra-reveal 2s cubic-bezier(0.8, 0.01, 0.11, 1);
 		transform: translateY(-100%);
 	}
 }
@@ -99,15 +100,15 @@ header{
 .contact-us{
 	top: 0;
 	left: 0;
-	-webkit-animation: whitebutt-delay .5s, contact-us-reveal 0.7s cubic-bezier(.04,.21,.03,.9) 2.5s;
-	animation: whitebutt-delay 2.5s, contact-us-reveal 0.7s cubic-bezier(.04,.21,.03,.9) 2.5s;
+	-webkit-animation: whitebutt-delay 3.2s, contact-us-reveal 0.7s cubic-bezier(.04,.21,.03,.9) 3.2s;
+	animation: whitebutt-delay 3.2s, contact-us-reveal 0.7s cubic-bezier(.04,.21,.03,.9) 3.2s;
 }
 .close-butt{
 	top: 0;
 	right: 0;
 	transform: translateY(-100%);
-	-webkit-animation: whitebutt-delay 2.5s, close-butt-reveal 1s cubic-bezier(.22,.34,0,1)  2.5s;
-	animation: whitebutt-delay 2.5s, close-butt-reveal 1s cubic-bezier(.22,.34,0,1)  2.5s;
+	-webkit-animation: whitebutt-delay 3.2s, close-butt-reveal 1s cubic-bezier(.22,.34,0,1)  3.2s;
+	animation: whitebutt-delay 3.2s, close-butt-reveal 1s cubic-bezier(.22,.34,0,1)  3.2s;
 }
 .reg-form-wrapper{
 	height: 50vh;
@@ -117,8 +118,8 @@ header{
 	bottom: 0;
 	right: 0;
 	position: absolute;
-	-webkit-animation: regform-delay 1s, regform-reveal 1s cubic-bezier(0.8, 0.01, 0.11, 1) 1s;
-	animation: regform-delay 1s, regform-reveal 1s cubic-bezier(0.8, 0.01, 0.11, 1) 1s;
+	-webkit-animation: regform-delay 2s, regform-reveal 1s cubic-bezier(0.8, 0.01, 0.11, 1) 2s;
+	animation: regform-delay 2s, regform-reveal 1s cubic-bezier(0.8, 0.01, 0.11, 1) 2s;
 
 }
 .reg-form{
