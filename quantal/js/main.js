@@ -1,3 +1,5 @@
+/*====== Preloader function ======*/
+
 var 
 	images				= document.images,
 	images_total_count	= images.length,
@@ -39,3 +41,5 @@ document.body.onload = function() {
 	}, 1000);
 
 }
+
+/* Endof preloader */

@@ -1,0 +1,19 @@
+			path{
+				transform-origin: 100px 100px;
+			}
+
+			#path6162,
+			#path6164,
+			#path6166,
+			#path6168{
+				animation: spin 4s linear infinite;
+			}
+			
+			@keyframes spin{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+				}
+			}
