@@ -47,11 +47,21 @@ document.body.onload = function() {
 /* Scrolling functions */
 
 window.onscroll = function() {
-	var scrolled = $(this).scrollTop();
-	var height = $(window).height();
-	var scrolPerc = ( scrolled / height ) * 100;
+	var scrolled	= $(this).scrollTop();
+	var height		= $(window).height();
+	var width		= $(window).width();
+	var scrolPerc	= ( scrolled / height ) * 100;
+	var horizPerc	= 100 - scrolPerc;
 
-	$("#main_page, #blue").css({'transform' : 'translate(-' + scrolPerc + '%, ' + scrolPerc + '%)'});
+	$("#main_page, #blue").css({ 'transform' : 'translate(-' + scrolPerc + '%, ' + scrolPerc + '%)' });
+	$("#wrapper").css({ 'clip' : 'rect(auto, ' + horizPerc + 'vw, auto, auto)' });
+	$(".white:before").css({ 'background' : 'red' })
+
+	if ( scrolled > height ) {
+		$("#main_page, #blue").css({ 'transform' : 'translate(-100%, 100%)' });
+		$("#wrapper").css({ 'clip' : 'rect(auto, 0vw, auto, auto)' });
+	}
+
 };
 
 /* Endof scrolling functions */
