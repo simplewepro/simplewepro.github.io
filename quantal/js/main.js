@@ -1,4 +1,4 @@
-/*====== Preloader function ======*/
+/*====== Preloader function ======
 
 var 
 	images				= document.images,
@@ -42,4 +42,16 @@ document.body.onload = function() {
 
 }
 
-/* Endof preloader */
+ Endof preloader */
+
+/* Scrolling functions */
+
+window.onscroll = function() {
+	var scrolled = $(this).scrollTop();
+	var height = $(window).height();
+	var scrolPerc = ( scrolled / height ) * 100;
+
+	$("#main_page, #blue").css({'transform' : 'translate(-' + scrolPerc + '%, ' + scrolPerc + '%)'});
+};
+
+/* Endof scrolling functions */
