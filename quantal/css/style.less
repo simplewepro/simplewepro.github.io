@@ -88,7 +88,7 @@ ul{
 	position: fixed;
 	//top: -100%;
 	width: 100%;
-	height: 90px;
+	height: 8vh;
 	background: #009AC7;
 }
 nav{
@@ -98,7 +98,7 @@ nav{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100px;
+	height: 10vh;
 	.wrapper{
 		z-index: 10;
 		position: fixed;
@@ -109,10 +109,10 @@ nav{
 		.logo{
 			transition: 0.2s;
 			position: absolute;
-			top: 58px;
-			left: 100px;
+			top: 5vh;
+			left: 10%;
 			display: inline-block;
-			font-size: 25px;
+			font-size: 3vh;
 			.regular;
 			text-transform: uppercase;
 			letter-spacing: 6.78%;
@@ -120,14 +120,16 @@ nav{
 		.menu{
 			transition: 0.2s;
 			position: absolute;
-			top: 58px;
-			right: 100px;
+			top: 5vh;
+			right: 10%;
+			width: 30%;
 			display: inline-block;
 			li{
 				.bold;
-				font-size: 20px;
-				margin-left: 30px;
+				font-size: 2.3vh;
+				margin-right: 3%;
 				a{
+					cursor: pointer;
 					display: inline-block;
 				}
 			}
@@ -140,8 +142,27 @@ nav{
 		transition: 0.2s;
 		&.isScrolled{
 			div,ul{
-				top: 35px;
+				top: 3vh;
 			}
+		}
+		li:before{
+			content: '';
+			z-index: -1;
+			position: absolute;
+			height: 100%;
+			width: 20%;
+			top: 0;
+			left: 5%;
+			overflow: hidden;
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+			-webkit-transition: 0.2s;
+			transition: 0.2s;
+		}
+		.current:before{
+			background: #004990;
+			transform: translateX(0);
+			transtion: 0.2s;
 		}
 	}
 }
@@ -169,49 +190,53 @@ section#main_page{
 	}
 	.main_banner{
 		width: 70%;
-		margin-top: 30vh;
 		float: right;
 		text-transform: uppercase;
 		.first_line{
 			display: inline-block;
 			position: relative;
+			top: 30vh;
 			.bold;
-			font-size: 150px;
-			line-height: 150px;
+			font-size: 14vh;
+			line-height: 14vh;
 			&:after{
 				content: '';
 				position: absolute;
-				bottom: 10px;
-				right: -40px;
-				height: 30px;
-				width: 30px;
+				bottom: 10%;
+				right: -5%;
+				height: 3vh;
+				width: 3vh;
 				background: #00B3E7;
 				border-radius: 50%;
 			}
 		}
 		.second_line{
-			position: relative;
+			position: absolute;
+			top: 44vh;
 			width: 100%;
+			height: 7vh;
 			color: #fff;
 			background: #00B3E7;
 			.bold;
-			font-size: 70px;
-			line-height: 55px;
-			padding-bottom: 10px;
-			padding-left: 10px;
+			font-size: 7vh;
+			line-height: 5.5vh;
+			padding-bottom: 1vh;
+			padding-left: 1%;
 			&:after{
 				content: '';
-				width: 112px;
-				height: 6px;
+				width: 10%;
+				height: 0.6vh;
 				position: absolute;
-				top: 35px;
-				margin-left: 30px;
+				top: 3vh;
+				margin-left: 3%;
 				background: #fff;
 			}
 		}
 		.third_line{
 			.bold;
-			font-size: 70px;
+			position: absolute;
+			top: 51vh;
+			font-size: 6vh;
 		}
 	}
 	.social{
@@ -238,13 +263,22 @@ section#main_page{
 		}
 	}
 }
-section#blue{
+section#about{
 	position: absolute;
 	top: 0;
 	left: 100%;
 	width: 100%;
 	height: 100vh;
 	background: #00B3E7;
+	.about_us{
+		position: absolute;
+		top: 17vh;
+		left: 12%;
+		.regular;
+		font-size: 20vh;
+		color: #fff;
+		letter-spacing: 1.7vw;
+	}
 }
 
 section#second_block{

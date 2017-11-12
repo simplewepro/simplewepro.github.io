@@ -48,19 +48,21 @@ document.body.onload = function() {
 
 window.onscroll = function() {
 	var scrolled	= $(this).scrollTop();
-	var height		= $(window).height();
-	var width		= $(window).width();
+	var height		= $(this).height();
+	var width		= $(this).width();
 	var scrolPerc	= ( scrolled / height ) * 100;
 	var horizPerc	= 100 - scrolPerc;
+	var workPosition= $("#work").offset();
 
-	$("#main_page, #blue").css({ 'transform' : 'translate(-' + scrolPerc + '%, ' + scrolPerc + '%)' });
+	$("#main_page, #about").css({ 'transform' : 'translate(-' + scrolPerc + '%, ' + scrolPerc + '%)' });
 	$("#wrapper").css({ 'clip' : 'rect(auto, ' + horizPerc + 'vw, auto, auto)' });
 	$(".white:before").css({ 'background' : 'red' })
 
 	if ( scrolled > height ) {
-		$("#main_page, #blue").css({ 'transform' : 'translate(-100%, 100%)' });
+		$("#main_page, #about").css({ 'transform' : 'translate(-100%, 100%)' });
 		$("#wrapper").css({ 'clip' : 'rect(auto, 0vw, auto, auto)' });
 	}
+
 	if ( scrolled > 2 * height - 90 ) {
 		$(".white").addClass("isScrolled");
 	}
@@ -68,6 +70,21 @@ window.onscroll = function() {
 		$(".white").removeClass("isScrolled");
 	}
 
+	if ( scrolled > height / 2 ) {
+		$("#about_link").addClass("current");
+		$("#work_link, #contact_link").removeClass("current");
+	}
+	else {
+		$("#about_link").removeClass("current");
+	}
+	if (scrolled > 2 * height) {
+		$("#about_link").removeClass("current");
+	}
 };
 
+function scrollToAbout() {
+	var height = $(window).height();
+
+    $("html, body").animate({ scrollTop: height }, 600);
+ };
 /* Endof scrolling functions */

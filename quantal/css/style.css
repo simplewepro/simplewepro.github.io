@@ -106,7 +106,7 @@ ul li {
 .nav-bg {
   position: fixed;
   width: 100%;
-  height: 90px;
+  height: 8vh;
   background: #009AC7;
 }
 nav {
@@ -116,7 +116,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 10vh;
 }
 nav .wrapper {
   z-index: 10;
@@ -131,10 +131,10 @@ nav .wrapper .logo {
   -o-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
-  top: 58px;
-  left: 100px;
+  top: 5vh;
+  left: 10%;
   display: inline-block;
-  font-size: 25px;
+  font-size: 3vh;
   font-family: 'GothamProRegular';
   text-transform: uppercase;
   letter-spacing: 6.78%;
@@ -144,16 +144,18 @@ nav .wrapper .menu {
   -o-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
-  top: 58px;
-  right: 100px;
+  top: 5vh;
+  right: 10%;
+  width: 30%;
   display: inline-block;
 }
 nav .wrapper .menu li {
   font-family: 'GothamProBold';
-  font-size: 20px;
-  margin-left: 30px;
+  font-size: 2.3vh;
+  margin-right: 3%;
 }
 nav .wrapper .menu li a {
+  cursor: pointer;
   display: inline-block;
 }
 nav .wrapper.white {
@@ -166,7 +168,30 @@ nav .wrapper.white {
 }
 nav .wrapper.white.isScrolled div,
 nav .wrapper.white.isScrolled ul {
-  top: 35px;
+  top: 3vh;
+}
+nav .wrapper.white li:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  top: 0;
+  left: 5%;
+  overflow: hidden;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+nav .wrapper.white .current:before {
+  background: #004990;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  transtion: 0.2s;
 }
 /*====== Main ======*/
 section#first_block {
@@ -193,50 +218,54 @@ section#main_page .main_logo {
 }
 section#main_page .main_banner {
   width: 70%;
-  margin-top: 30vh;
   float: right;
   text-transform: uppercase;
 }
 section#main_page .main_banner .first_line {
   display: inline-block;
   position: relative;
+  top: 30vh;
   font-family: 'GothamProBold';
-  font-size: 150px;
-  line-height: 150px;
+  font-size: 14vh;
+  line-height: 14vh;
 }
 section#main_page .main_banner .first_line:after {
   content: '';
   position: absolute;
-  bottom: 10px;
-  right: -40px;
-  height: 30px;
-  width: 30px;
+  bottom: 10%;
+  right: -5%;
+  height: 3vh;
+  width: 3vh;
   background: #00B3E7;
   border-radius: 50%;
 }
 section#main_page .main_banner .second_line {
-  position: relative;
+  position: absolute;
+  top: 44vh;
   width: 100%;
+  height: 7vh;
   color: #fff;
   background: #00B3E7;
   font-family: 'GothamProBold';
-  font-size: 70px;
-  line-height: 55px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  font-size: 7vh;
+  line-height: 5.5vh;
+  padding-bottom: 1vh;
+  padding-left: 1%;
 }
 section#main_page .main_banner .second_line:after {
   content: '';
-  width: 112px;
-  height: 6px;
+  width: 10%;
+  height: 0.6vh;
   position: absolute;
-  top: 35px;
-  margin-left: 30px;
+  top: 3vh;
+  margin-left: 3%;
   background: #fff;
 }
 section#main_page .main_banner .third_line {
   font-family: 'GothamProBold';
-  font-size: 70px;
+  position: absolute;
+  top: 51vh;
+  font-size: 6vh;
 }
 section#main_page .social {
   position: absolute;
@@ -259,13 +288,22 @@ section#main_page .social ul li a {
   font-size: 15px;
   letter-spacing: 19px;
 }
-section#blue {
+section#about {
   position: absolute;
   top: 0;
   left: 100%;
   width: 100%;
   height: 100vh;
   background: #00B3E7;
+}
+section#about .about_us {
+  position: absolute;
+  top: 17vh;
+  left: 12%;
+  font-family: 'GothamProRegular';
+  font-size: 20vh;
+  color: #fff;
+  letter-spacing: 1.7vw;
 }
 section#second_block {
   width: 100%;
