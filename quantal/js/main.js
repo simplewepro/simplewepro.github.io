@@ -61,6 +61,12 @@ window.onscroll = function() {
 		$("#main_page, #blue").css({ 'transform' : 'translate(-100%, 100%)' });
 		$("#wrapper").css({ 'clip' : 'rect(auto, 0vw, auto, auto)' });
 	}
+	if ( scrolled > 2 * height - 90 ) {
+		$(".white").addClass("isScrolled");
+	}
+	else{
+		$(".white").removeClass("isScrolled");
+	}
 
 };
 

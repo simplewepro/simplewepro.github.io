@@ -127,6 +127,9 @@ nav .wrapper {
   height: 100%;
 }
 nav .wrapper .logo {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   position: absolute;
   top: 58px;
   left: 100px;
@@ -137,6 +140,9 @@ nav .wrapper .logo {
   letter-spacing: 6.78%;
 }
 nav .wrapper .menu {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   position: absolute;
   top: 58px;
   right: 100px;
@@ -154,6 +160,13 @@ nav .wrapper.white {
   color: #fff;
   top: 0;
   z-index: 9;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+nav .wrapper.white.isScrolled div,
+nav .wrapper.white.isScrolled ul {
+  top: 35px;
 }
 /*====== Main ======*/
 section#first_block {
