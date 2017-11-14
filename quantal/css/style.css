@@ -310,14 +310,72 @@ section#about {
   height: 100vh;
   background: #00B3E7;
 }
+section#about .about_us_shadow {
+  position: absolute;
+  font-family: 'GothamProBold';
+  font-size: 45vh;
+  color: rgba(0, 73, 144, 0.1);
+  left: 10%;
+  top: -11vh;
+}
 section#about .about_us {
   position: absolute;
   top: 17vh;
-  left: 12%;
+  left: 10%;
   font-family: 'GothamProRegular';
   font-size: 20vh;
   color: #fff;
   letter-spacing: 1.7vw;
+}
+section#about .scroll_line {
+  position: absolute;
+  top: 44vh;
+  width: 54%;
+  height: 7vh;
+  background: #fff;
+  border-top-right-radius: 3.5vh;
+  text-align: right;
+  padding-right: 5%;
+  padding-top: 2vh;
+  font-size: 2vh;
+  letter-spacing: 3vh;
+}
+section#about .scroll_line_vertical {
+  position: absolute;
+  top: 44vh;
+  right: 46%;
+  width: 7vh;
+  height: 56vh;
+  background: #fff;
+  border-top-right-radius: 3.5vh;
+  text-align: center;
+  font-size: 2vh;
+  padding-top: 10vh;
+  line-height: 3.5vh;
+}
+section#about .about_cards {
+  position: relative;
+  display: inline-block;
+  top: 53vh;
+  width: 49%;
+}
+section#about .about_cards .about_card h3 {
+  font-family: 'GothamProBold';
+  font-size: 3vh;
+  color: #004180;
+}
+section#about .about_cards .about_card .about_card_text {
+  font-family: 'GothamProRegular';
+  font-size: 1.7vh;
+  color: #fff;
+}
+section#about .left_block {
+  float: left;
+  padding-left: 5%;
+}
+section#about .right_block {
+  float: right;
+  padding-left: 10%;
 }
 section#second_block {
   width: 100%;
