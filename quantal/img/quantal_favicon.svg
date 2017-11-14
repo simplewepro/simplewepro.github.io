@@ -133,13 +133,13 @@
 			#path6154,
 			#path6144,
 			#path6146{
-				animation: spin 5s linear infinite;
+				animation: spin 6s linear infinite;
 			}
 			#path6160,
 			#path6158,
 			#path6152,
 			#path6148{
-				animation: spin 5s linear infinite reverse;
+				animation: spin 6s linear infinite reverse;
 			}
 			@keyframes spin{
 				from{

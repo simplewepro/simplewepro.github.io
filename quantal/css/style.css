@@ -127,7 +127,7 @@ nav .wrapper {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 10vh;
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
@@ -181,7 +181,7 @@ nav .wrapper.white li:before {
   z-index: -1;
   position: absolute;
   height: 100%;
-  width: 20%;
+  width: 15%;
   top: 0;
   left: 5%;
   overflow: hidden;
@@ -201,11 +201,25 @@ nav .wrapper.white .current:before {
 }
 /*====== Main ======*/
 section#first_block {
+  overflow: hidden;
   z-index: 7;
   position: relative;
   top: 0;
   left: 0;
   height: 200vh;
+}
+section#first_block .sign_scroll {
+  position: fixed;
+  top: 46vh;
+  right: 0;
+  z-index: 4;
+  font-family: 'GothamProBlack';
+  font-size: 1.5vh;
+  letter-spacing: 3vh;
+  color: #fff;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 section#main_page {
   -webkit-transition: left 1s;
@@ -334,24 +348,29 @@ section#about .scroll_line {
   height: 7vh;
   background: #fff;
   border-top-right-radius: 3.5vh;
-  text-align: right;
   padding-right: 5%;
   padding-top: 2vh;
-  font-size: 2vh;
-  letter-spacing: 3vh;
 }
 section#about .scroll_line_vertical {
+  overflow: hidden;
   position: absolute;
-  top: 44vh;
+  top: 51vh;
   right: 46%;
   width: 7vh;
-  height: 56vh;
+  height: 49vh;
   background: #fff;
-  border-top-right-radius: 3.5vh;
-  text-align: center;
-  font-size: 2vh;
   padding-top: 10vh;
-  line-height: 3.5vh;
+}
+section#about .scroll_line_vertical .sign_scroll_vert {
+  position: absolute;
+  top: 0;
+  right: 45%;
+  font-family: 'GothamProBlack';
+  font-size: 1.5vh;
+  line-height: 3.2vh;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 section#about .about_cards {
   position: relative;
@@ -383,3 +402,11 @@ section#second_block {
   background: #abb88e;
 }
 /*======== Адаптив ========*/
+@media (min-width: 0px) and (max-width: 1280px) {
+  section#main_page .main_banner .second_line {
+    font-size: 6.2vh;
+  }
+  section#main_page .main_banner .second_line:after {
+    width: 5%;
+  }
+}
