@@ -74,6 +74,9 @@ body {
 .half {
   width: 50%;
 }
+.fixed {
+  position: fixed;
+}
 a,
 button,
 input {
@@ -125,6 +128,9 @@ nav .wrapper {
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 nav .wrapper .logo {
   -webkit-transition: 0.2s;
@@ -197,11 +203,16 @@ nav .wrapper.white .current:before {
 section#first_block {
   z-index: 7;
   position: relative;
+  top: 0;
+  left: 0;
   height: 200vh;
 }
 section#main_page {
+  -webkit-transition: left 1s;
+  -o-transition: left 1s;
+  transition: left 1s;
   background: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -289,7 +300,10 @@ section#main_page .social ul li a {
   letter-spacing: 19px;
 }
 section#about {
-  position: absolute;
+  -webkit-transition: left 1s;
+  -o-transition: left 1s;
+  transition: left 1s;
+  position: fixed;
   top: 0;
   left: 100%;
   width: 100%;
