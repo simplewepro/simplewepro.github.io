@@ -1,0 +1,172 @@
+/*====== Fonts ======*/
+@font-face {
+    font-family: 'GothamProBold';
+    src: url('fonts/GothamProBold.eot');
+    src: url('fonts/GothamProBold.eot') format('embedded-opentype'),
+         url('fonts/GothamProBold.woff2') format('woff2'),
+         url('fonts/GothamProBold.woff') format('woff'),
+         url('fonts/GothamProBold.ttf') format('truetype'),
+         url('fonts/GothamProBold.svg#GothamProBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamProRegular';
+    src: url('fonts/GothamProRegular.eot');
+    src: url('fonts/GothamProRegular.eot') format('embedded-opentype'),
+         url('fonts/GothamProRegular.woff2') format('woff2'),
+         url('fonts/GothamProRegular.woff') format('woff'),
+         url('fonts/GothamProRegular.ttf') format('truetype'),
+         url('fonts/GothamProRegular.svg#GothamProRegular') format('svg');
+}
+@font-face {
+    font-family: 'GothamProBlack';
+    src: url('fonts/GothamProBlack.eot');
+    src: url('fonts/GothamProBlack.eot') format('embedded-opentype'),
+         url('fonts/GothamProBlack.woff2') format('woff2'),
+         url('fonts/GothamProBlack.woff') format('woff'),
+         url('fonts/GothamProBlack.ttf') format('truetype'),
+         url('fonts/GothamProBlack.svg#GothamProBlack') format('svg');
+}
+
+.bold{
+	font-family: 'GothamProBold';
+}
+.regular{
+    font-family: 'GothamProRegular';
+}
+.black{
+	font-family: 'GothamProBlack';
+}
+
+/*====== Base settings ======*/
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.clear::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+a,
+button,
+input{
+	-moz-outline-style: none;
+	outline-style: none;
+}
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active{
+	text-decoration: none;
+}
+/*====== Nav bar ======*/
+
+#nav{
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	text-align: right;
+	transition: 0.4s;
+}
+#nav .menu{
+	margin-top: 20px;
+	margin-right: 40px;
+	list-style: none;
+}
+#nav .menu li{
+	display: inline-block;
+	margin-left: 40px;
+}
+#nav .menu li a{
+	display: inline-block;
+	font-family: 'GothamProBlack';
+	color: #fff;
+	font-size: 18px;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+#nav .menu li a:hover{
+	color: #006fff;
+	border-bottom: 2px solid #006fff;
+}
+#nav .scrolled{
+	background: #fff;
+	color: #006fff;
+}
+
+/*====== Header ======*/
+
+#header{
+	background: url("../img/header-bg.jpg") no-repeat center bottom;
+	background-size: cover;
+	position: relative;
+	
+	font-family: 'GothamProBlack';
+	height: 100vh;
+	width: 100%;
+}
+
+#header .scroll-arrow{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	height: 50px;
+	width: 50px;
+	padding-top: 13px;
+
+	text-align: center;
+
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+#header .header-title{
+	font-family: 'GothamProRegular';
+	color: #fff;
+	display: inline-block;
+	padding-top: 200px;
+	padding-left: 150px;
+}
+#header .header-title h1{
+	border-bottom: 7px solid #fff;
+	font-size: 112px;
+}
+#header .header-title h4{
+	margin-top: 10px;
+	font-size: 24px;
+	text-align: right;
+}
+
+#header .scroll-arrow i{
+	font-size: 24px;
+	color: #fff;
+	transition: 0.2s;
+}
+#header .scroll-arrow:hover i{
+	color: #006fff;
+	padding-top: 4px;
+}
+
+/*====== About us ======*/
+
+#about{
+	width: 100%;
+}
+
+#about .about-title{
+	text-align: center;
+	margin-top: 100px;
+	font-size: 48px;
+	font-family: 'GothamProBold';
+}

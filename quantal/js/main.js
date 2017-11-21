@@ -85,7 +85,11 @@ window.onscroll = function() {
 		$(".sign_scroll").css({ 'opacity' : '1' , 'transform' : 'translateX(0)' });	
 	}
 
+<<<<<<< Updated upstream
 	var scrolled2 = scrolled - height;
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 	if ( scrolled > height ) {
 		$("#main_page, #about").css({ 'position' : 'absolute', 'top' : '100vh' });
 		$(".sign_scroll_vert").css({ 'transform' : 'translateY(' + scrolled2 + 'px)', 'transition-delay' : '0s', 'transition' : '0s' });
@@ -93,6 +97,8 @@ window.onscroll = function() {
 	else {
 		$("#main_page, #about").css({ 'position' : 'fixed', 'top' : '0' });
 	}
+=======
+>>>>>>> Stashed changes
 	if ( scrolled > 2 * height - 90 ) {
 		$(".white").addClass("isScrolled");
 	}
@@ -108,9 +114,21 @@ window.onscroll = function() {
 	}
 };
 
+<<<<<<< Updated upstream
 function scrollToAbout() {
 	var height = $(window).height();
 
     $("html, body").animate({ scrollTop: height }, 600);
  };
+=======
+$(document).ready(function() {
+	var scrolled	= $(this).scrollTop();
+	var height		= $(window).height();
+	if ( scrolled > height ) {
+		$("#main_page, #blue").css({ 'transform' : 'translate(-100%, 100%)' });
+		$("#wrapper").css({ 'clip' : 'rect(auto, 0vw, auto, auto)' });
+	}
+});
+
+>>>>>>> Stashed changes
 /* Endof scrolling functions */
