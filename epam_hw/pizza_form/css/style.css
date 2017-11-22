@@ -1,0 +1,150 @@
+/*====== Fonts ======*/
+@font-face {
+    font-family: 'GothamProBold';
+    src: url('fonts/GothamProBold.eot');
+    src: url('fonts/GothamProBold.eot') format('embedded-opentype'),
+         url('fonts/GothamProBold.woff2') format('woff2'),
+         url('fonts/GothamProBold.woff') format('woff'),
+         url('fonts/GothamProBold.ttf') format('truetype'),
+         url('fonts/GothamProBold.svg#GothamProBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamProRegular';
+    src: url('fonts/GothamProRegular.eot');
+    src: url('fonts/GothamProRegular.eot') format('embedded-opentype'),
+         url('fonts/GothamProRegular.woff2') format('woff2'),
+         url('fonts/GothamProRegular.woff') format('woff'),
+         url('fonts/GothamProRegular.ttf') format('truetype'),
+         url('fonts/GothamProRegular.svg#GothamProRegular') format('svg');
+}
+@font-face {
+    font-family: 'GothamProBlack';
+    src: url('fonts/GothamProBlack.eot');
+    src: url('fonts/GothamProBlack.eot') format('embedded-opentype'),
+         url('fonts/GothamProBlack.woff2') format('woff2'),
+         url('fonts/GothamProBlack.woff') format('woff'),
+         url('fonts/GothamProBlack.ttf') format('truetype'),
+         url('fonts/GothamProBlack.svg#GothamProBlack') format('svg');
+}
+
+.bold{
+	font-family: 'GothamProBold';
+}
+.regular{
+    font-family: 'GothamProRegular';
+}
+.black{
+	font-family: 'GothamProBlack';
+}
+
+/*====== Base settings ======*/
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.clear::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+a,
+button,
+input{
+	-moz-outline-style: none;
+	outline-style: none;
+}
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active{
+	text-decoration: none;
+}
+/*====== Pizza form ======*/
+
+section#order_a_pizza{
+	background: #ddbdff;
+	width: 100%;
+	height: 600px;
+	padding-top: 50px;
+	text-align: center;
+}
+.order-form{
+	background: #fff;
+	display: inline-block;
+	position: relative;
+	width: 400px;
+	height: 500px;
+	padding: 20px;
+}
+.order-form h1{
+	font-family: 'GothamProBlack';
+}
+.order-form h3{
+	font-family: 'GothamProBold';
+	font-size: 14px;
+	color: #c30066;
+	position: absolute;
+	right: 20px;
+	top: 45px;
+	transform: rotate(-18deg);
+}
+.order-form form{
+	font-family: 'GothamProRegular';
+	text-align: left;
+	margin-top: 40px;
+}
+.order-form form input{
+	border: none;
+	background: #fbdb65;
+	padding: 10px;
+	font-family: 'GothamProBlack';
+}
+.order-form form input[name="name"]{
+	width: 360px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.adress>input{
+	display: inline-block;
+	margin-top: 10px;
+}
+.adress>input:first-of-type{
+	width: 160px;
+}
+.adress>input:nth-of-type(2){
+	width: 135px;
+}
+.adress>input:last-of-type{
+	width: 55px;
+}
+#pizza_size{
+	float: left;
+	display: inline-block;
+	margin-top: 20px;
+	padding-top: 10px;
+	width: 120px;
+}
+#pizza_filling{
+	width: 240px;
+	display: inline-block;
+	margin-top: 20px;
+	padding-top: 10px;
+	float: right;
+}
+#pizza_filling>label{
+	width: 120px;
+}
+#pizza_filling>label:nth-of-type(odd){
+	float: right;
+}
+.order-form form #submit{
+	width: 240px;
+	height: 80px;
+	margin-left: 60px;
+	margin-top: 40px;
+	font-size: 28px;
+	text-align: center;
+}
