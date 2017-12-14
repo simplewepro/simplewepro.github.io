@@ -1,0 +1,199 @@
+section#first_block{
+	overflow: hidden;
+
+	z-index: 7;
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 200vh;
+	.sign_scroll{
+		position: fixed;
+		top: 46vh;
+		right: 0;
+		z-index: 4;
+		
+		font-family: 'GothamProBlack';
+		font-size: 1.5vh;
+		letter-spacing: 3vh;
+		color: #fff;
+
+		transition: 1s;
+	}
+}
+
+section#main_page{
+	transition: left 1s;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	.main_logo{
+		position: absolute;
+		top: 50%;
+		transform: translate(-55%, -50%);
+		height: 70vh;
+		width: 70vh;
+	}
+	.main_banner{
+		width: 70%;
+		float: right;
+		text-transform: uppercase;
+		.first_line{
+			display: inline-block;
+			position: relative;
+			top: 30vh;
+			font-family: 'GothamProBold';
+			font-size: 14vh;
+			line-height: 14vh;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: 10%;
+				right: -5%;
+				height: 3vh;
+				width: 3vh;
+				background: #00B3E7;
+				border-radius: 50%;
+			}
+		}
+		.second_line{
+			position: absolute;
+			top: 44vh;
+			width: 100%;
+			height: 7vh;
+			color: #fff;
+			background: #00B3E7;
+			font-family: 'GothamProBold';
+			font-size: 7vh;
+			line-height: 5.5vh;
+			padding-bottom: 1vh;
+			padding-left: 1%;
+			&:after{
+				content: '';
+				width: 10%;
+				height: 0.6vh;
+				position: absolute;
+				top: 3vh;
+				margin-left: 3%;
+				background: #fff;
+			}
+		}
+		.third_line{
+			font-family: 'GothamProBold';
+			position: absolute;
+			top: 51vh;
+			font-size: 6vh;
+		}
+	}
+	.social{
+		position: absolute;
+		bottom: 20px;
+		right: 0;
+		ul{
+			li{
+				margin-right: 102px;
+				.fb{
+					color: #004990;
+				}
+				.inst{
+					color: #DB4D45;
+				}
+				.mail{
+					color: #508EF2;
+				}
+				a{
+					font-size: 15px;
+					letter-spacing: 19px;
+				}
+			}
+		}
+	}
+}
+section#about{
+	transition: left 1s;
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100vh;
+	background: #00B3E7;
+	.about_us_shadow{
+		position: absolute;
+		font-family: 'GothamProBold';
+		font-size: 45vh;
+		color: rgba(0, 73, 144, 0.1);
+		left: 10%;
+		top: -11vh;
+		
+	}
+	.about_us{
+		position: absolute;
+		top: 17vh;
+		left: 10%;
+		font-family: 'GothamProRegular';
+		font-size: 20vh;
+		color: #fff;
+		letter-spacing: 1.7vw;
+	}
+
+	.scroll_line{
+		position: absolute;
+		top: 44vh;
+		width: 54%;
+		height: 7vh;
+		background: #fff;
+		border-top-right-radius: 3.5vh;
+		padding-right: 5%;
+		padding-top: 2vh;
+	}
+	.scroll_line_vertical{
+		overflow: hidden;
+		position: absolute;
+		top: 51vh;
+		right: 46%;
+		width: 7vh;
+		height: 49vh;
+		background: #fff;
+		padding-top: 10vh;
+		.sign_scroll_vert{
+			position: absolute;
+			top: 0;
+			right: 45%;
+			
+			font-family: 'GothamProBlack';
+			font-size: 1.5vh;
+			line-height: 3.2vh;
+
+			transition: 1s;
+		}
+	}
+	.about_cards{
+		position: relative;
+		display: inline-block;
+		top: 53vh;
+		width: 49%;
+		.about_card{
+			//margin-bottom: 3.2vh;
+			h3{
+				font-family: 'GothamProBold';
+				font-size: 3vh;
+				color: #004180;
+			}
+			.about_card_text{
+				font-family: 'GothamProRegular';
+				font-size: 1.7vh;
+				color: #fff;
+			}
+		}
+	}
+	.left_block{
+		float: left;
+		padding-left: 5%;
+	}
+	.right_block{
+		float: right;
+		padding-left: 10%;
+	}
+}

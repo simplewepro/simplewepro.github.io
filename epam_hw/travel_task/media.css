@@ -1,0 +1,103 @@
+@media(min-width: 0px) and (max-width: 768px) {
+	.header_links nav{
+		width: 30%;
+		float: right;
+	}
+	/*====== Might be an burger menu, troubles with DOM hierarchy
+	.header_links nav::before{
+		content: ' ';
+		display: inline-block;
+		z-index: 200;
+		cursor: pointer;
+		background: url(img/burger.png);
+		background-size: contain;
+		margin-top: 10px;
+		height: 40px;
+		width: 40px;
+	}
+	.header_links nav ul{
+		display: none;
+	}
+	.header_links nav::before:hover>ul,
+	.header_links nav ul:hover{
+		display: inline-block;
+	}					======*/
+	.header_links::after{
+		content: ' ';
+		display: inline-block;
+		z-index: 200;
+		float: right;
+		cursor: pointer;
+		margin-top: 10px;
+		margin-right: 20px;
+		height: 40px;
+		width: 40px;
+		background: url(img/burger.png);
+		background-size: contain;
+	}
+	.header_links nav{
+		display: none;
+	}
+	.header_links button{
+		float: right;
+	}
+	.text_content{
+		float: none;
+		display: block;
+		width: 95%;
+		padding: 10px;
+		font-size: 1em;
+	}
+	.banner img {
+		display: none;
+	}
+	.banner button{
+		position: static;
+		font-size: 2em;
+	}
+	.video_wrapper,
+	.experiance{
+		float: none;
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.offer{
+		float: none;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+}
+@media(min-width: 769px) and (max-width: 976px) {
+	.header_links nav {
+		width: auto;
+	}
+	.text_content{
+		float: none;
+		display: block;
+		width: 95%;
+		padding: 10px;
+		font-size: 1em;
+	}
+	.banner img {
+		display: none;
+	}
+	.banner button{
+		position: static;
+		font-size: 2em;
+	}
+	.video_wrapper,
+	.experiance{
+		float: none;
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.offer{
+		float: none;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+}

@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('fonts/OpenSansLight.eot');
+    src: url('fonts/OpenSansLight.eot') format('embedded-opentype'),
+         url('fonts/OpenSansLight.woff2') format('woff2'),
+         url('fonts/OpenSansLight.woff') format('woff'),
+         url('fonts/OpenSansLight.ttf') format('truetype'),
+         url('fonts/OpenSansLight.svg#OpenSansLight') format('svg');
+}
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/OpenSansRegular.eot');
+    src: url('fonts/OpenSansRegular.eot') format('embedded-opentype'),
+         url('fonts/OpenSansRegular.woff2') format('woff2'),
+         url('fonts/OpenSansRegular.woff') format('woff'),
+         url('fonts/OpenSansRegular.ttf') format('truetype'),
+         url('fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('fonts/OpenSansBold.eot');
+    src: url('fonts/OpenSansBold.eot') format('embedded-opentype'),
+         url('fonts/OpenSansBold.woff2') format('woff2'),
+         url('fonts/OpenSansBold.woff') format('woff'),
+         url('fonts/OpenSansBold.ttf') format('truetype'),
+         url('fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+}
+@font-face {
+    font-family: 'Lobster';
+    src: url('fonts/Lobster_1_4.eot');
+    src: url('fonts/Lobster_1_4.eot') format('embedded-opentype'),
+         url('fonts/Lobster_1_4.woff2') format('woff2'),
+         url('fonts/Lobster_1_4.woff') format('woff'),
+         url('fonts/Lobster_1_4.ttf') format('truetype'),
+         url('fonts/Lobster_1_4.svg#Lobster_1_4') format('svg');
+}
+@font-face {
+    font-family: 'Atvice';
+    src: url('fonts/ATViCE.eot');
+    src: url('fonts/ATViCE.eot') format('embedded-opentype'),
+         url('fonts/ATViCE.woff2') format('woff2'),
+         url('fonts/ATViCE.woff') format('woff'),
+         url('fonts/ATViCE.ttf') format('truetype'),
+         url('fonts/ATViCE.svg#ATViCE') format('svg');
+}
+
+.open-sans-light{
+	font-family: 'OpenSansLight';
+}
+.open-sans-regular{
+	font-family: 'OpenSansRegular';
+}
+.open-sans-bold{
+	font-family: 'OpenSansBold';
+}
+.lobster{
+    font-family: 'Lobster';
+}
+.atvice{
+    font-family: 'Atvice';
+}

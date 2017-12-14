@@ -71,6 +71,7 @@ button{
 a{
 	color: inherit;
 }
+a,
 a:hover,
 a:focus,
 a:visited,
@@ -78,7 +79,6 @@ a:active{
 	text-decoration: none;
 	color: inherit;
 }
-
 ul{
 	list-style: none;
 	li{
@@ -89,7 +89,6 @@ ul{
 /*====== Навбар ======*/
 .nav-bg{
 	position: fixed;
-	//top: -100%;
 	width: 100%;
 	height: 8vh;
 	background: #009AC7;
@@ -234,30 +233,34 @@ section#main_page{
 		}
 		.second_line{
 			position: absolute;
-			top: 44vh;
+			top: 46vh;
 			width: 100%;
 			height: 7vh;
-			color: #fff;
-			background: #00B3E7;
+			color: #00b3e7;
 			.bold;
 			font-size: 7vh;
 			line-height: 5.5vh;
 			padding-bottom: 1vh;
 			padding-left: 1%;
-			&:after{
-				content: '';
-				width: 10%;
-				height: 0.6vh;
-				position: absolute;
-				top: 3vh;
-				margin-left: 3%;
-				background: #fff;
+			h3{
+				display: inline-block;
+				line-height: 3.5vh;
+				vertical-align: top;
+				padding-bottom: 1.2vh;
+				color: #004990;
+				font-size: 6vh;
+				border-bottom: 0.6vh solid #004990;
+			}
+			h2{
+				display: inline-block;
+				font-size: 12vh;
+				padding-left: 1vh;
 			}
 		}
 		.third_line{
 			.bold;
 			position: absolute;
-			top: 51vh;
+			top: 54vh;
 			font-size: 6vh;
 		}
 	}
@@ -278,8 +281,8 @@ section#main_page{
 					color: #508EF2;
 				}
 				a{
-					font-size: 15px;
-					letter-spacing: 19px;
+					font-size: 1.7vh;
+					letter-spacing: 1.3vw;
 				}
 			}
 		}
@@ -372,12 +375,38 @@ section#about{
 	}
 }
 
-section#second_block{
-	width: 100%;
-	height: 200vh;
-	background: #abb88e;
+#our_team{
+	padding-top: 80px;
 }
-
-
+.skill{
+	width: 90%;
+	margin: 0 auto;
+	padding-left: 20px;
+	margin-top: 10px;
+	border-left: 2px solid rgba(0,0,0,.4);
+	.black;
+	transition: 0.3s;
+}
+.skill_title{
+	.black;
+	cursor: pointer;
+	display: block;
+	border: none;
+	padding: 0;
+	background: none;
+	font-size: 1.8em;
+}
+.skill_list{
+	overflow: hidden;
+	height: 0;
+	font-size: 1.2em;
+	transition: 0.3s;
+	line-height: 38px;
+}
+.skill_title.opened~.skill_list{
+	visibility: visible;
+	height: 400px;
+	padding-top: 20px;
+}
 
 @import "media.less";

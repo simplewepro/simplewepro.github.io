@@ -1,32 +1,38 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
+import './Header.css';
+
+function scrollToAbout() {
+	var height = window.height();
+
+	(document.html, document.body).animate({ scrollTop: height }, 600);
+};
 
 class Header extends Component {
-	static propTypes = {
-		items: PropTypes.array.isRequiredб
-		isLoading: PropTypes.bool,
-		submit: PropTypes.func.isRequired,
-		title: PropTypes.string.isRequired,
-		type: PropTypes.oneOf(['news', 'photos']),
-		user: PropTypes.shape({
-			name: PropTypes.string,
-			age: PropTypes.number
-		}),
-		users: PropTypes.arrayOf(
-			PropTypes.shape({
-				name: PropTypes.string,
-				age: PropTypes.number
-			}),
-		)
-	};
-
 	render() {
 		return (
-			<div> 
-				{this.props.items.map((item, index) =>
-						<a href={item.link} key={index}>{item.label}</a>
-				)}
-			</div>
+			<nav id="header">
+				<div id="wrapper" className="wrapper">
+					<div className="logo">
+						Quantal
+					</div>
+					<ul className="menu">
+						<li><a onClick="scrollToAbout()">about</a></li>
+						<li><a>works</a></li>
+						<li><a>contacts</a></li>
+					</ul>
+				</div>
+				<div className="wrapper white">
+					<div className="logo">
+						Quantal
+					</div>
+					<ul className="menu">
+						<li id="about_link"><a onClick="scrollToAbout()">about</a></li>
+						<li id="work_link"><a>works</a></li>
+						<li id="contact_link"><a>contacts</a></li>
+					</ul>
+				</div>
+			</nav>
 		);
 	}
 }
