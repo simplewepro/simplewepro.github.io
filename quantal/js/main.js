@@ -50,27 +50,35 @@ window.onscroll = function() {
 	var scrolled	= $(this).scrollTop();
 	var height		= $(this).height();
 	var width		= $(this).width();
-	var workPosition= $("#work").offset();
 
+	//quarter of screen scrolled, second page shown
 	if ( scrolled > height / 4 ) {
 		$("#main_page").css({ 'left' : "-100%" });
 		$("#about").css({ 'left' : "0" });
 		$("#wrapper").css({ 'clip' : 'rect(auto, 0vw, auto, auto)' });
 
-		$(".sign_scroll").css({ 'right' : '50%', 'color' : 'black' });
+		$(".sign_scroll").css({ 'right' : '50%' });
 
 		$("#about_link").addClass("current");
 		$("#work_link, #contact_link").removeClass("current");
+
+		//about cards
+		$('.about_card').addClass('active');
 	}
 	else{
 		$("#main_page").css({ 'left' : "0" });
 		$("#about").css({ 'left' : "100%" });
 		$("#wrapper").css({ 'clip' : 'rect(auto, 100vw, auto, auto)' });
 
-		$(".sign_scroll").css({ 'right' : '0', 'color' : 'white' });
+		$(".sign_scroll").css({ 'right' : '-250px' });
 
 		$("#about_link").removeClass("current");
+
+		//about cards
+		$('.about_card').removeClass('active');
 	}
+	//endof quarter
+	//half of screen scrolled
 	if ( scrolled < height / 2 ) {
 		$(".sign_scroll_vert").css({ 'transform' : 'translateY(-100%)', 'transition-delay' : '0s', 'transition' : '0.5s' });
 	}
@@ -84,9 +92,9 @@ window.onscroll = function() {
 	else{
 		$(".sign_scroll").css({ 'opacity' : '1' , 'transform' : 'translateX(0)' });	
 	}
-
+	//endof half screen
 	var scrolled2 = scrolled - height;
-
+	//scrolled one screen
 	if ( scrolled > height ) {
 		$("#main_page, #about").css({ 'position' : 'absolute', 'top' : '100vh' });
 		$(".sign_scroll_vert").css({ 'transform' : 'translateY(' + scrolled2 + 'px)', 'transition-delay' : '0s', 'transition' : '0s' });
@@ -94,7 +102,8 @@ window.onscroll = function() {
 	else {
 		$("#main_page, #about").css({ 'position' : 'fixed', 'top' : '0' });
 	}
-
+	//endof first screen scroll
+	//scrolled first block
 	if ( scrolled > 2 * height - 90 ) {
 		$(".white").addClass("isScrolled");
 	}
@@ -105,8 +114,19 @@ window.onscroll = function() {
 	if (scrolled > 2 * height) {
 		$("#about_link").removeClass("current");
 	}
-	else{
-		//$("#main_page, #about").css({ 'position' : 'fixed'});
+	//endof first block
+
+	//team card review animation
+	var listItems = document.querySelectorAll(".team_card");
+	var teamCard = document.querySelector(".team_card");
+
+	for(i = 0; i < listItems.length; i++){
+		var listItem = listItems[i];
+		if( scrolled + height > teamCard.top ){
+			listItem.addClass('active');
+		} else {
+			listItem.removeClass('active');			
+		}
 	}
 };
 
@@ -115,19 +135,4 @@ function scrollToAbout() {
 
     $("html, body").animate({ scrollTop: height }, 600);
  };
-
-$(document).ready(function() {
-	var scrolled	= $(this).scrollTop();
-	var height		= $(window).height();
-	if ( scrolled > height ) {
-		$("#main_page, #blue").css({ 'transform' : 'translate(-100%, 100%)' });
-		$("#wrapper").css({ 'clip' : 'rect(auto, 0vw, auto, auto)' });
-	}
-});
-
-$(document).ready(function() {
-	$(".skill_title").click(function(){
-		$(this).toggleClass("opened");
-	});
-});
 /* Endof scrolling functions */

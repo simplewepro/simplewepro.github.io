@@ -62,6 +62,12 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.clear::before,
+.clear::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 .hidden {
   display: none;
 }
@@ -106,8 +112,29 @@ ul {
 ul li {
   display: inline-block;
 }
+/*====== Баз стили ======*/
+.section_title_shadow {
+  position: absolute;
+  font-family: 'GothamProBold';
+  font-size: 23em;
+  text-transform: uppercase;
+  color: rgba(0, 73, 144, 0.1);
+  left: 10%;
+  top: -11vh;
+}
+.section_title {
+  position: absolute;
+  top: 17vh;
+  left: 10%;
+  font-family: 'GothamProRegular';
+  font-size: 10em;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.7vw;
+}
 /*====== Навбар ======*/
 .nav-bg {
+  z-index: 2;
   position: fixed;
   width: 100%;
   height: 8vh;
@@ -141,7 +168,7 @@ nav .wrapper .logo {
   top: 5vh;
   left: 10%;
   display: inline-block;
-  font-size: 3vh;
+  font-size: 1.8em;
   font-family: 'GothamProRegular';
   text-transform: uppercase;
   letter-spacing: 6.78%;
@@ -158,7 +185,7 @@ nav .wrapper .menu {
 }
 nav .wrapper .menu li {
   font-family: 'GothamProBold';
-  font-size: 2.3vh;
+  font-size: 1.3em;
   margin-right: 3%;
 }
 nav .wrapper .menu li a {
@@ -209,19 +236,6 @@ section#first_block {
   left: 0;
   height: 200vh;
 }
-section#first_block .sign_scroll {
-  position: fixed;
-  top: 46vh;
-  right: 0;
-  z-index: 4;
-  font-family: 'GothamProBlack';
-  font-size: 1.5vh;
-  letter-spacing: 3vh;
-  color: #fff;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-}
 section#main_page {
   -webkit-transition: left 1s;
   -o-transition: left 1s;
@@ -250,52 +264,68 @@ section#main_page .main_banner {
 section#main_page .main_banner .first_line {
   display: inline-block;
   position: relative;
-  top: 30vh;
+  top: 29vh;
   font-family: 'GothamProBold';
-  font-size: 14vh;
-  line-height: 14vh;
+  font-size: 6.5em;
 }
 section#main_page .main_banner .first_line:after {
   content: '';
   position: absolute;
   bottom: 10%;
   right: -5%;
-  height: 3vh;
-  width: 3vh;
+  height: 25px;
+  width: 25px;
   background: #00B3E7;
   border-radius: 50%;
 }
 section#main_page .main_banner .second_line {
-  position: absolute;
-  top: 46vh;
+  position: relative;
+  top: 31vh;
   width: 100%;
   height: 7vh;
   color: #00b3e7;
   font-family: 'GothamProBold';
-  font-size: 7vh;
+  font-size: 4em;
   line-height: 5.5vh;
   padding-bottom: 1vh;
   padding-left: 1%;
 }
 section#main_page .main_banner .second_line h3 {
   display: inline-block;
-  line-height: 3.5vh;
+  line-height: .5em;
   vertical-align: top;
-  padding-bottom: 1.2vh;
+  padding-bottom: 1.4vh;
   color: #004990;
-  font-size: 6vh;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
   border-bottom: 0.6vh solid #004990;
 }
 section#main_page .main_banner .second_line h2 {
   display: inline-block;
-  font-size: 12vh;
+  font-size: 1.7em;
   padding-left: 1vh;
+}
+section#main_page .main_banner .second_line::after {
+  content: 'scroll';
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: calc(94%);
+  right: 0;
+  color: #fff;
+  font-size: 12px;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  padding-top: 6px;
+  line-height: 20px;
+  background: #00b3e7;
 }
 section#main_page .main_banner .third_line {
   font-family: 'GothamProBold';
-  position: absolute;
-  top: 54vh;
-  font-size: 6vh;
+  position: relative;
+  top: 32vh;
+  font-size: 3em;
 }
 section#main_page .social {
   position: absolute;
@@ -319,6 +349,7 @@ section#main_page .social ul li a {
   letter-spacing: 1.3vw;
 }
 section#about {
+  overflow: hidden;
   -webkit-transition: left 1s;
   -o-transition: left 1s;
   transition: left 1s;
@@ -329,23 +360,6 @@ section#about {
   height: 100vh;
   background: #00B3E7;
 }
-section#about .about_us_shadow {
-  position: absolute;
-  font-family: 'GothamProBold';
-  font-size: 45vh;
-  color: rgba(0, 73, 144, 0.1);
-  left: 10%;
-  top: -11vh;
-}
-section#about .about_us {
-  position: absolute;
-  top: 17vh;
-  left: 10%;
-  font-family: 'GothamProRegular';
-  font-size: 20vh;
-  color: #fff;
-  letter-spacing: 1.7vw;
-}
 section#about .scroll_line {
   position: absolute;
   top: 44vh;
@@ -355,6 +369,19 @@ section#about .scroll_line {
   border-top-right-radius: 3.5vh;
   padding-right: 5%;
   padding-top: 2vh;
+}
+section#about .scroll_line .sign_scroll {
+  position: fixed;
+  right: -250px;
+  z-index: 4;
+  font-family: 'GothamProBlack';
+  opacity: 0;
+  font-size: 1.5vh;
+  letter-spacing: 3vh;
+  color: #000;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 section#about .scroll_line_vertical {
   overflow: hidden;
@@ -383,59 +410,164 @@ section#about .about_cards {
   top: 53vh;
   width: 49%;
 }
+section#about .about_cards .about_card {
+  height: 16vh;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
 section#about .about_cards .about_card h3 {
   font-family: 'GothamProBold';
-  font-size: 3vh;
+  font-size: 2em;
   color: #004180;
 }
 section#about .about_cards .about_card .about_card_text {
   font-family: 'GothamProRegular';
-  font-size: 1.7vh;
+  font-size: 1em;
   color: #fff;
+}
+section#about .about_cards .about_card:first-of-type {
+  -webkit-transition-delay: 0.7s;
+  -o-transition-delay: 0.7s;
+  transition-delay: 0.7s;
+}
+section#about .about_cards .about_card:nth-of-type(2) {
+  -webkit-transition-delay: 0.8s;
+  -o-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+section#about .about_cards .about_card:last-of-type {
+  -webkit-transition-delay: 0.9s;
+  -o-transition-delay: 0.9s;
+  transition-delay: 0.9s;
+}
+section#about .about_cards .about_card.active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 section#about .left_block {
   float: left;
   padding-left: 5%;
 }
+section#about .left_block .about_card {
+  -webkit-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
+  transform: translateX(-20%);
+}
 section#about .right_block {
   float: right;
   padding-left: 10%;
 }
-#our_team {
+section#about .right_block .about_card {
+  -webkit-transform: translateX(20%);
+  -ms-transform: translateX(20%);
+  transform: translateX(20%);
+}
+#our_team_block {
   padding-top: 80px;
 }
-.skill {
+.skills_wrapper {
+  position: relative;
   width: 90%;
   margin: 0 auto;
+}
+.skill {
+  display: inline-block;
   padding-left: 20px;
   margin-top: 10px;
-  border-left: 2px solid rgba(0, 0, 0, 0.4);
-  font-family: 'GothamProBlack';
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.skill_title {
+  border-left: 2px solid #b2b2b2;
   font-family: 'GothamProBlack';
   cursor: pointer;
   display: block;
-  border: none;
-  padding: 0;
+  color: #b2b2b2;
   background: none;
+  text-align: left;
   font-size: 1.8em;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.skill:hover {
+  border-color: black;
+  color: black;
+}
+.skills_wrapper input {
+  display: none;
+}
+.skills_wrapper input:checked + label {
+  color: black;
+  border-color: black;
+}
+.skills_wrapper input:checked + .skill > .skill_list {
+  color: black;
+  visibility: visible;
+  height: 400px;
+  padding-top: 20px;
 }
 .skill_list {
   overflow: hidden;
   height: 0;
-  font-size: 1.2em;
+  font-size: 0.8em;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   line-height: 38px;
 }
-.skill_title.opened ~ .skill_list {
-  visibility: visible;
-  height: 400px;
-  padding-top: 20px;
+.our_team {
+  position: relative;
+  margin-top: 20vh;
+  padding-top: 40vh;
+}
+.our_team .section_title {
+  color: black;
+}
+.team_wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.team_col {
+  display: inline-block;
+  margin-left: 80px;
+}
+.team_col.second_col {
+  padding-top: 240px;
+}
+.team_card {
+  overflow: hidden;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 160px;
+  -webkit-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  transform: translateY(20%);
+  background: #efefef;
+  -webkit-transition: 0.8s 0.1s;
+  -o-transition: 0.8s 0.1s;
+  transition: 0.8s 0.1s;
+}
+.team_card img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+.team_card.active {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.team_card.active img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 /*======== Адаптив ========*/
