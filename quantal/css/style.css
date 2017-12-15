@@ -31,8 +31,6 @@
   width: 100%;
   height: 100%;
   z-index: 300;
-  -webkit-transition: 1s all;
-  -o-transition: 1s all;
   transition: 1s all;
   opacity: 1;
   visibility: visible;
@@ -45,8 +43,6 @@
   width: 200px;
   height: 200px;
   text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .preloader.done {
@@ -59,7 +55,6 @@ body {
 }
 * {
   margin: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .clear::before,
@@ -156,13 +151,9 @@ nav .wrapper {
   left: 0;
   width: 100%;
   height: 10vh;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 nav .wrapper .logo {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
   top: 5vh;
@@ -174,8 +165,6 @@ nav .wrapper .logo {
   letter-spacing: 6.78%;
 }
 nav .wrapper .menu {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
   top: 5vh;
@@ -196,8 +185,6 @@ nav .wrapper.white {
   color: #fff;
   top: 0;
   z-index: 9;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
 }
 nav .wrapper.white.isScrolled div,
@@ -214,16 +201,12 @@ nav .wrapper.white li:before {
   left: 5%;
   overflow: hidden;
   -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
 }
 nav .wrapper.white .current:before {
   background: #004990;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
   transtion: 0.2s;
 }
@@ -237,8 +220,6 @@ section#first_block {
   height: 200vh;
 }
 section#main_page {
-  -webkit-transition: left 1s;
-  -o-transition: left 1s;
   transition: left 1s;
   background: #fff;
   position: fixed;
@@ -250,8 +231,6 @@ section#main_page {
 section#main_page .main_logo {
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-55%, -50%);
-  -ms-transform: translate(-55%, -50%);
   transform: translate(-55%, -50%);
   height: 70vh;
   width: 70vh;
@@ -264,7 +243,7 @@ section#main_page .main_banner {
 section#main_page .main_banner .first_line {
   display: inline-block;
   position: relative;
-  top: 29vh;
+  top: 24vh;
   font-family: 'GothamProBold';
   font-size: 6.5em;
 }
@@ -280,9 +259,9 @@ section#main_page .main_banner .first_line:after {
 }
 section#main_page .main_banner .second_line {
   position: relative;
-  top: 31vh;
+  top: 29vh;
   width: 100%;
-  height: 7vh;
+  height: 60px;
   color: #00b3e7;
   font-family: 'GothamProBold';
   font-size: 4em;
@@ -314,8 +293,6 @@ section#main_page .main_banner .second_line::after {
   right: 0;
   color: #fff;
   font-size: 12px;
-  -webkit-writing-mode: vertical-lr;
-  -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
   padding-top: 6px;
   line-height: 20px;
@@ -350,8 +327,6 @@ section#main_page .social ul li a {
 }
 section#about {
   overflow: hidden;
-  -webkit-transition: left 1s;
-  -o-transition: left 1s;
   transition: left 1s;
   position: fixed;
   top: 0;
@@ -364,11 +339,11 @@ section#about .scroll_line {
   position: absolute;
   top: 44vh;
   width: 54%;
-  height: 7vh;
+  height: 60px;
   background: #fff;
   border-top-right-radius: 3.5vh;
   padding-right: 5%;
-  padding-top: 2vh;
+  padding-top: 20px;
 }
 section#about .scroll_line .sign_scroll {
   position: fixed;
@@ -376,11 +351,9 @@ section#about .scroll_line .sign_scroll {
   z-index: 4;
   font-family: 'GothamProBlack';
   opacity: 0;
-  font-size: 1.5vh;
+  font-size: 1em;
   letter-spacing: 3vh;
   color: #000;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 section#about .scroll_line_vertical {
@@ -388,7 +361,7 @@ section#about .scroll_line_vertical {
   position: absolute;
   top: 51vh;
   right: 46%;
-  width: 7vh;
+  width: 60px;
   height: 49vh;
   background: #fff;
   padding-top: 10vh;
@@ -396,25 +369,22 @@ section#about .scroll_line_vertical {
 section#about .scroll_line_vertical .sign_scroll_vert {
   position: absolute;
   top: 0;
-  right: 45%;
+  text-align: center;
+  right: 40%;
   font-family: 'GothamProBlack';
-  font-size: 1.5vh;
+  font-size: 1em;
   line-height: 3.2vh;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 section#about .about_cards {
   position: relative;
   display: inline-block;
-  top: 53vh;
+  top: 54vh;
   width: 49%;
 }
 section#about .about_cards .about_card {
   height: 16vh;
   opacity: 0;
-  -webkit-transition: 0.6s;
-  -o-transition: 0.6s;
   transition: 0.6s;
 }
 section#about .about_cards .about_card h3 {
@@ -428,24 +398,16 @@ section#about .about_cards .about_card .about_card_text {
   color: #fff;
 }
 section#about .about_cards .about_card:first-of-type {
-  -webkit-transition-delay: 0.7s;
-  -o-transition-delay: 0.7s;
   transition-delay: 0.7s;
 }
 section#about .about_cards .about_card:nth-of-type(2) {
-  -webkit-transition-delay: 0.8s;
-  -o-transition-delay: 0.8s;
   transition-delay: 0.8s;
 }
 section#about .about_cards .about_card:last-of-type {
-  -webkit-transition-delay: 0.9s;
-  -o-transition-delay: 0.9s;
   transition-delay: 0.9s;
 }
 section#about .about_cards .about_card.active {
   opacity: 1;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 section#about .left_block {
@@ -453,8 +415,6 @@ section#about .left_block {
   padding-left: 5%;
 }
 section#about .left_block .about_card {
-  -webkit-transform: translateX(-20%);
-  -ms-transform: translateX(-20%);
   transform: translateX(-20%);
 }
 section#about .right_block {
@@ -462,8 +422,6 @@ section#about .right_block {
   padding-left: 10%;
 }
 section#about .right_block .about_card {
-  -webkit-transform: translateX(20%);
-  -ms-transform: translateX(20%);
   transform: translateX(20%);
 }
 #our_team_block {
@@ -486,8 +444,6 @@ section#about .right_block .about_card {
   background: none;
   text-align: left;
   font-size: 1.8em;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .skill:hover {
@@ -511,8 +467,6 @@ section#about .right_block .about_card {
   overflow: hidden;
   height: 0;
   font-size: 0.8em;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   line-height: 38px;
 }
@@ -541,33 +495,15 @@ section#about .right_block .about_card {
   width: 350px;
   height: 350px;
   margin-bottom: 160px;
-  -webkit-transform: translateY(20%);
-  -ms-transform: translateY(20%);
-  transform: translateY(20%);
-  background: #efefef;
-  -webkit-transition: 0.8s 0.1s;
-  -o-transition: 0.8s 0.1s;
   transition: 0.8s 0.1s;
 }
 .team_card img {
-  position: absolute;
   height: 100%;
   width: 100%;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  -webkit-transition: inherit;
-  -o-transition: inherit;
-  transition: inherit;
+  transform: scale(1.5);
+  transition: 1.2s;
 }
-.team_card.active {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-.team_card.active img {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
+.team_card img.animated {
   transform: scale(1);
 }
 /*======== Адаптив ========*/
