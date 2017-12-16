@@ -137,6 +137,27 @@ ul li {
   color: #fff;
   letter-spacing: 1.7vw;
 }
+.scroll_line_vertical {
+  overflow: hidden;
+  position: absolute;
+  right: 46%;
+  width: 60px;
+  height: 60vh;
+  background: #fff;
+  padding-top: 10vh;
+}
+.scroll_line_vertical .sign_scroll_vert {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  right: 40%;
+  font-family: 'GothamProBlack';
+  font-size: 1em;
+  line-height: 3.2vh;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
 /*====== Навбар ======*/
 .nav-bg {
   z-index: 2;
@@ -160,7 +181,7 @@ nav .wrapper {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 80px;
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
@@ -405,29 +426,10 @@ section#about .scroll_line .sign_scroll {
   transition: 1s;
 }
 section#about .scroll_line_vertical {
-  overflow: hidden;
-  position: absolute;
   top: 44vh;
   -webkit-transform: translateY(60px);
   -ms-transform: translateY(60px);
   transform: translateY(60px);
-  right: 46%;
-  width: 60px;
-  height: 60vh;
-  background: #fff;
-  padding-top: 10vh;
-}
-section#about .scroll_line_vertical .sign_scroll_vert {
-  position: absolute;
-  top: 0;
-  text-align: center;
-  right: 40%;
-  font-family: 'GothamProBlack';
-  font-size: 1em;
-  line-height: 3.2vh;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
 }
 section#about .about_cards {
   position: relative;
@@ -541,12 +543,16 @@ section#about .right_block .about_card {
   transition: 0.3s;
   line-height: 38px;
 }
+/*====== Our team======*/
 .our_team {
   position: relative;
   margin-top: 20vh;
 }
 .our_team .section_title {
   color: black;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
 }
 .team_wrapper {
   width: 90%;
@@ -665,9 +671,18 @@ section#about .right_block .about_card {
   overflow: hidden;
   background: #00b3e7;
 }
-.review .section_title_shadow {
+.review .section_title_wrapper .section_title_shadow {
+  left: 2%;
   -webkit-transform: translateX(-15px);
   -ms-transform: translateX(-15px);
   transform: translateX(-15px);
+}
+.review .section_title_wrapper .section_title {
+  left: 2%;
+  font-size: 6em;
+}
+.review .scroll_line_vertical {
+  top: 0;
+  margin-top: 0;
 }
 /*======== Адаптив ========*/

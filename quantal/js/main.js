@@ -80,10 +80,10 @@ window.onscroll = function() {
 	//endof quarter
 	//half of screen scrolled
 	if ( scrolled < height / 2 ) {
-		$(".sign_scroll_vert").css({ 'transform' : 'translateY(-100%)', 'transition-delay' : '0s', 'transition' : '0.5s' });
+		$("#scrollSignAbout").css({ 'transform' : 'translateY(-100%)', 'transition-delay' : '0s', 'transition' : '0.5s' });
 	}
 	else{
-		$(".sign_scroll_vert").css({ 'transform' : 'translateY(0)', 'transition-delay' : '0.5s', 'transition' : '0.5s' });
+		$("#scrollSignAbout").css({ 'transform' : 'translateY(0)', 'transition-delay' : '0.5s', 'transition' : '0.5s' });
 	}
 
 	if ( scrolled > height / 2 ) {
@@ -97,7 +97,7 @@ window.onscroll = function() {
 	//scrolled one screen
 	if ( scrolled > height ) {
 		$("#main_page, #about").css({ 'position' : 'absolute', 'top' : '100vh' });
-		$(".sign_scroll_vert").css({ 'transform' : 'translateY(' + scrolled2 + 'px)', 'transition-delay' : '0s', 'transition' : '0s' });
+		$("#scrollSignAbout").css({ 'transform' : 'translateY(' + scrolled2 + 'px)', 'transition-delay' : '0s', 'transition' : '0s' });
 	}
 	else {
 		$("#main_page, #about").css({ 'position' : 'fixed', 'top' : '0' });
@@ -116,13 +116,26 @@ window.onscroll = function() {
 	}
 	//endof first block
 	//review
-	var works = $('#review');
+	var review 		= $('#review'),
+		reviewHalf 	= scrolled - review.offset().top + (0.4 * height);
 
-	if(scrolled > works.offset().top - 80){
+
+	if(scrolled > review.offset().top - 80){
 		$("#work_link").addClass("current");
 	}
 	else{
 		$("#work_link").removeClass("current");
+	}
+
+	if ( scrolled < review.offset().top ) {
+		$("#scrollSignReview").css({ 'transform' : 'translateY(-100%)', 'transition-delay' : '0s', 'transition' : '0.5s' });
+	}
+	else{
+		$("#scrollSignReview").css({ 'transform' : 'translateY(0)', 'transition-delay' : '0.5s', 'transition' : '0.5s' });
+	}
+
+	if ( scrolled > reviewHalf ) {
+		$("#scrollSignReview").css({ 'transform' : 'translateY(' + reviewHalf + 'px)', 'transition-delay' : '0s', 'transition' : '0s' });
 	}
 };
 
