@@ -408,7 +408,7 @@ section#about .scroll_line {
   width: 54%;
   height: 60px;
   background: #fff;
-  border-top-right-radius: 3.5vh;
+  border-top-right-radius: 30px;
   padding-right: 5%;
   padding-top: 20px;
 }
@@ -665,24 +665,69 @@ section#about .right_block .about_card {
   opacity: 1;
 }
 /*====== Review ======*/
-.review {
+.review_plus_works {
+  height: 250vh;
+  top: 0;
+  position: relative;
+}
+.review_plus_works .review {
+  -webkit-transition: left 1s;
+  -o-transition: left 1s;
+  transition: left 1s;
+  z-index: 0;
+  width: 100%;
   height: 100vh;
+  top: 0;
   position: relative;
   overflow: hidden;
   background: #00b3e7;
 }
-.review .section_title_wrapper .section_title_shadow {
+.review_plus_works .review .section_title_wrapper .section_title_shadow {
   left: 2%;
-  -webkit-transform: translateX(-15px);
-  -ms-transform: translateX(-15px);
-  transform: translateX(-15px);
+  bottom: -55px;
+  -webkit-transform: translateX(-20px);
+  -ms-transform: translateX(-20px);
+  transform: translateX(-20px);
 }
-.review .section_title_wrapper .section_title {
+.review_plus_works .review .section_title_wrapper .section_title {
   left: 2%;
   font-size: 6em;
 }
-.review .scroll_line_vertical {
+.review_plus_works .review .scroll_line_vertical {
   top: 0;
+  height: 50vh;
   margin-top: 0;
+}
+.review_plus_works .scroll_line {
+  position: absolute;
+  z-index: 1;
+  top: 50vh;
+  left: 54%;
+  width: 60%;
+  height: 60px;
+  -webkit-transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
+  transform: translateX(-60px);
+  background: #fff;
+  border-bottom-left-radius: 30px;
+  padding-right: 5%;
+  padding-top: 20px;
+}
+.review_plus_works .sign_scroll {
+  position: fixed;
+  top: 50vh;
+  left: 54%;
+  -webkit-transform: translate(-10%, 20px);
+  -ms-transform: translate(-10%, 20px);
+  transform: translate(-10%, 20px);
+  z-index: 4;
+  font-family: 'GothamProBlack';
+  opacity: 0;
+  font-size: 1em;
+  letter-spacing: 3vh;
+  color: #000;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
 }
 /*======== Адаптив ========*/

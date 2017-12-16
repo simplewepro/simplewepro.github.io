@@ -57,7 +57,7 @@ window.onscroll = function() {
 		$("#about").css({ 'left' : "0" });
 		$("#wrapper").css({ 'clip' : 'rect(auto, 0vw, auto, auto)' });
 
-		$(".sign_scroll").css({ 'right' : '50%' });
+		$("#signScrollAboutHor").css({ 'right' : '50%' });
 
 		$("#about_link").addClass("current");
 		$("#work_link, #contact_link").removeClass("current");
@@ -70,7 +70,7 @@ window.onscroll = function() {
 		$("#about").css({ 'left' : "100%" });
 		$("#wrapper").css({ 'clip' : 'rect(auto, 100vw, auto, auto)' });
 
-		$(".sign_scroll").css({ 'right' : '-250px' });
+		$("#signScrollAboutHor").css({ 'right' : '-250px' });
 
 		$("#about_link").removeClass("current");
 
@@ -87,10 +87,10 @@ window.onscroll = function() {
 	}
 
 	if ( scrolled > height / 2 ) {
-		$(".sign_scroll").css({ 'opacity' : '0', 'transform' : 'translateX(30%)' });
+		$("#signScrollAboutHor").css({ 'opacity' : '0', 'transform' : 'translateX(30%)' });
 	}
 	else{
-		$(".sign_scroll").css({ 'opacity' : '1' , 'transform' : 'translateX(0)' });	
+		$("#signScrollAboutHor").css({ 'opacity' : '1' , 'transform' : 'translateX(0)' });	
 	}
 	//endof half screen
 	var scrolled2 = scrolled - height;
@@ -117,7 +117,8 @@ window.onscroll = function() {
 	//endof first block
 	//review
 	var review 		= $('#review'),
-		reviewHalf 	= scrolled - review.offset().top + (0.4 * height);
+		reviewPlusWorks = $(".review_plus_works"),
+		reviewHalf 	= scrolled - reviewPlusWorks.offset().top + (0.3 * height);
 
 
 	if(scrolled > review.offset().top - 80){
@@ -136,6 +137,27 @@ window.onscroll = function() {
 
 	if ( scrolled > reviewHalf ) {
 		$("#scrollSignReview").css({ 'transform' : 'translateY(' + reviewHalf + 'px)', 'transition-delay' : '0s', 'transition' : '0s' });
+	}
+
+	if ( scrolled > $(".review_plus_works").offset().top ) {
+		review.css({ 'position' : 'fixed' });
+	}
+	else{
+		review.css({ 'position' : 'relative' });
+	}
+
+	if ( scrolled > reviewPlusWorks.offset().top + (0.6 * height) ) {
+		$("#scrollSignReviewHor").css({ 'opacity' : '1', 'transform' : 'translate(0, 20px)' });
+	}
+	else{
+		$("#scrollSignReviewHor").css({ 'opacity' : '0', 'transform' : 'translate(-10%, 20px)' });
+	}
+
+	if ( scrolled > reviewPlusWorks.offset().top + height ) {
+		$(".review").css({ 'left' : '-100%' });
+	}
+	else{
+		$(".review").css({ 'left' : '0' });
 	}
 };
 
