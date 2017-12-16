@@ -92,6 +92,10 @@ ul{
 }
 
 /*====== Баз стили ======*/
+.section_title_wrapper{
+	position: relative;
+	height: 30vh;
+}
 .section_title_shadow{
 		position: absolute;
 		.bold;
@@ -118,7 +122,7 @@ ul{
 	z-index: 2;
 	position: fixed;
 	width: 100%;
-	height: 8vh;
+	height: 60px;
 	background: #009AC7;
 }
 nav{
@@ -128,19 +132,19 @@ nav{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 10vh;
+	height: 60px;
 	.wrapper{
 		z-index: 10;
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 10vh;
+		height: 60px;
 		transition: 1s;
 		.logo{
 			transition: 0.2s;
 			position: absolute;
-			top: 5vh;
+			top: 35px;
 			left: 10%;
 			display: inline-block;
 			font-size: 1.8em;
@@ -151,7 +155,7 @@ nav{
 		.menu{
 			transition: 0.2s;
 			position: absolute;
-			top: 5vh;
+			top: 35px;
 			right: 10%;
 			width: 30%;
 			display: inline-block;
@@ -165,23 +169,23 @@ nav{
 				}
 			}
 		}
+		&.isScrolled{
+			div,ul{
+				top: 20px;
+			}
+		}
 	}
 	.wrapper.white{
 		color: #fff;
 		top: 0;
 		z-index: 9;
 		transition: 0.2s;
-		&.isScrolled{
-			div,ul{
-				top: 3vh;
-			}
-		}
 		li:before{
 			content: '';
 			z-index: -1;
 			position: absolute;
 			height: 100%;
-			width: 15%;
+			width: 60px;
 			top: 0;
 			left: 5%;
 			overflow: hidden;
@@ -258,9 +262,8 @@ section#main_page{
 			padding-left: 1%;
 			h3{
 				display: inline-block;
-				line-height: .5em;
+				margin-top: -20px;
 				vertical-align: top;
-				padding-bottom: 1.4vh;
 				color: #004990;
 				font-size: 0.85em;
 				letter-spacing: 0.1em;
@@ -294,12 +297,15 @@ section#main_page{
 		}
 	}
 	.social{
+		width: 100%;
 		position: absolute;
-		bottom: 20px;
-		right: 0;
+		bottom: 0;
+
 		ul{
 			li{
-				margin-right: 102px;
+				width: 30%;
+				height: 30px;
+				text-align: center;
 				.fb{
 					color: #004990;
 				}
@@ -310,9 +316,22 @@ section#main_page{
 					color: #508EF2;
 				}
 				a{
-					font-size: 1.7vh;
-					letter-spacing: 1.3vw;
+					transition: 0.2s;
+					font-size: 1em;
+					letter-spacing: 1em;
 				}
+				&:hover a{
+					letter-spacing: .6em;
+				}
+			}
+			li:first-of-type{
+				right: 70%;
+			}
+			li:nth-of-type(2){
+				right: 40%;
+			}
+			li:last-of-type{
+				right: 10%;
 			}
 		}
 	}
@@ -469,7 +488,6 @@ section#about{
 .our_team{
 	position: relative;
 	margin-top: 20vh;
-	padding-top: 40vh;
 	.section_title{
 		color: black;
 	}
@@ -477,6 +495,7 @@ section#about{
 .team_wrapper{
 	width: 90%;
 	margin: 0 auto;
+	padding-top: 180px;
 }
 .team_col{
 	display: inline-block;
@@ -484,25 +503,92 @@ section#about{
 }
 .team_col.second_col{
 	padding-top: 240px;
+	.team_card:last-of-type{
+		margin-bottom: 40px;
+	}
 }
 .team_card{
-	overflow: hidden;
+	//overflow: hidden;
 	position: relative;
 	width: 350px;
 	height: 350px;
 	margin-bottom: 160px;
 	transition: 0.8s 0.1s;
-	img{
-		height: 100%;
-		width: 100%;
-		transform: scale(1.5);
-		transition: 1.2s;
+	.regular;
+	.card_photo_wrapper{
+		position: relative;
+		height: 350px;
+		width: 350px;
+		overflow: hidden;
+		img{
+			height: 100%;
+			width: 100%;
+			transform: scale(1.5);
+			transition: 1.2s;
+		}
 	}
-	img.animated{
-		transform: scale(1);
+	.team_card_sign{
+		position: absolute;
+		top: 44%;
+		right: -140px;
+		width: 200px;
+		font-size: 1.2em;
+		text-align: right;
+		text-transform: uppercase;
+		&::before{
+			content: '';
+			position: absolute;
+			opacity: 0;
+			top: 50%;
+			left: 0;
+			transform: translateX(100%);
+			transition: .4s .8s;
+			width: 140px;
+			height: 3px;
+			background: black;
+		}
+	}
+	.card_name{
+		transform: translateX(100%;);
+		transition: .4s 1s;
+		display: inline-block;
+		opacity: 0;
+	}
+	.card_position{
+		display: inline-block;
+		transform: translateX(200%);
+		transition: .4s 1.2s;
+		opacity: 0;
+		color: #00b3e7;
+	}
+	.animated{
+		img{
+			transform: scale(1);	
+		}
+	}
+	.animated~.team_card_sign{
+		&::before{
+			opacity: 1;
+			transform: translateX(0);
+		}
+		.card_name{
+			transform: translateX(0);
+			opacity: 1;
+		}
+		.card_position{
+			transform: translateX(100%);
+			opacity: 1;
+		}
 	}
 }
-.team_card::after{
-	
+
+/*====== Review ======*/
+
+.review{
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: #00b3e7;
 }
+
 @import "media.less";

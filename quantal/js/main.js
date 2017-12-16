@@ -115,18 +115,14 @@ window.onscroll = function() {
 		$("#about_link").removeClass("current");
 	}
 	//endof first block
+	//review
+	var works = $('#review');
 
-	//team card review animation
-	var listItems = document.querySelectorAll(".team_card");
-	var teamCard = document.querySelector(".team_card");
-
-	for(i = 0; i < listItems.length; i++){
-		var listItem = listItems[i];
-		if( scrolled + height > teamCard.top ){
-			listItem.addClass('active');
-		} else {
-			listItem.removeClass('active');			
-		}
+	if(scrolled > works.offset().top - 80){
+		$("#work_link").addClass("current");
+	}
+	else{
+		$("#work_link").removeClass("current");
 	}
 };
 
