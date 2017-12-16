@@ -94,28 +94,29 @@ ul{
 /*====== Баз стили ======*/
 .section_title_wrapper{
 	position: relative;
+	margin-top: 7vh;
 	height: 30vh;
 }
 .section_title_shadow{
-		position: absolute;
-		.bold;
-		font-size: 23em;
-		text-transform: uppercase;
-		color: rgba(0, 73, 144, 0.1);
-		left: 10%;
-		top: -11vh;
-		
-	}
+	position: absolute;
+	.bold;
+	font-size: 23em;
+	text-transform: uppercase;
+	color: rgba(0, 73, 144, 0.1);
+	left: 10%;
+	bottom: -44px;
+	
+}
 .section_title{
-		position: absolute;
-		top: 17vh;
-		left: 10%;
-		.regular;
-		font-size: 10em;
-		text-transform: uppercase;
-		color: #fff;
-		letter-spacing: 1.7vw;
-	}
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	.regular;
+	font-size: 10em;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 1.7vw;
+}
 
 /*====== Навбар ======*/
 .nav-bg{
@@ -274,20 +275,20 @@ section#main_page{
 				font-size: 1.7em;
 				padding-left: 1vh;
 			}
-			&::after{
-				content: 'scroll';
-				position: absolute;
-				top: 0;
-				width: 20px;
-				height: calc(100% - 6px);
-				right: 0;
-				color: #fff;
-				font-size: 12px;
-				writing-mode:  vertical-lr;
-				padding-top: 6px;
-				line-height: 20px;
-				background: #00b3e7;
-			}
+		}
+		.scroll_tag{
+			position: absolute;
+			.black;
+			top: 44vh;
+			width: 20px;
+			height: 60px;
+			right: 0;
+			color: #fff;
+			font-size: 12px;
+			writing-mode:  vertical-lr;
+			padding-top: 6px;
+			line-height: 20px;
+			background: #00b3e7;
 		}
 		.third_line{
 			.bold;
@@ -369,10 +370,11 @@ section#about{
 	.scroll_line_vertical{
 		overflow: hidden;
 		position: absolute;
-		top: 51vh;
+		top: 44vh;
+		transform: translateY(60px);
 		right: 46%;
 		width: 60px;
-		height: 49vh;
+		height: 60vh;
 		background: #fff;
 		padding-top: 10vh;
 		.sign_scroll_vert{
@@ -391,7 +393,7 @@ section#about{
 	.about_cards{
 		position: relative;
 		display: inline-block;
-		top: 54vh;
+		top: 14vh;
 		width: 49%;
 		.about_card{
 			height: 16vh;
@@ -589,6 +591,9 @@ section#about{
 	position: relative;
 	overflow: hidden;
 	background: #00b3e7;
+	.section_title_shadow{
+		transform: translateX(-15px);
+	}
 }
 
 @import "media.less";

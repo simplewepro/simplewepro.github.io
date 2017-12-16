@@ -31,6 +31,8 @@
   width: 100%;
   height: 100%;
   z-index: 300;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
   transition: 1s all;
   opacity: 1;
   visibility: visible;
@@ -43,6 +45,8 @@
   width: 200px;
   height: 200px;
   text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .preloader.done {
@@ -55,6 +59,7 @@ body {
 }
 * {
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .clear::before,
@@ -110,6 +115,7 @@ ul li {
 /*====== Баз стили ======*/
 .section_title_wrapper {
   position: relative;
+  margin-top: 7vh;
   height: 30vh;
 }
 .section_title_shadow {
@@ -119,11 +125,11 @@ ul li {
   text-transform: uppercase;
   color: rgba(0, 73, 144, 0.1);
   left: 10%;
-  top: -11vh;
+  bottom: -44px;
 }
 .section_title {
   position: absolute;
-  top: 17vh;
+  bottom: 0;
   left: 10%;
   font-family: 'GothamProRegular';
   font-size: 10em;
@@ -155,9 +161,13 @@ nav .wrapper {
   left: 0;
   width: 100%;
   height: 60px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 nav .wrapper .logo {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
   top: 35px;
@@ -169,6 +179,8 @@ nav .wrapper .logo {
   letter-spacing: 6.78%;
 }
 nav .wrapper .menu {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
   top: 35px;
@@ -193,6 +205,8 @@ nav .wrapper.white {
   color: #fff;
   top: 0;
   z-index: 9;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 nav .wrapper.white li:before {
@@ -205,12 +219,16 @@ nav .wrapper.white li:before {
   left: 5%;
   overflow: hidden;
   -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 nav .wrapper.white .current:before {
   background: #004990;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
   transtion: 0.2s;
 }
@@ -224,6 +242,8 @@ section#first_block {
   height: 200vh;
 }
 section#main_page {
+  -webkit-transition: left 1s;
+  -o-transition: left 1s;
   transition: left 1s;
   background: #fff;
   position: fixed;
@@ -235,6 +255,8 @@ section#main_page {
 section#main_page .main_logo {
   position: absolute;
   top: 50%;
+  -webkit-transform: translate(-55%, -50%);
+  -ms-transform: translate(-55%, -50%);
   transform: translate(-55%, -50%);
   height: 70vh;
   width: 70vh;
@@ -287,15 +309,17 @@ section#main_page .main_banner .second_line h2 {
   font-size: 1.7em;
   padding-left: 1vh;
 }
-section#main_page .main_banner .second_line::after {
-  content: 'scroll';
+section#main_page .main_banner .scroll_tag {
   position: absolute;
-  top: 0;
+  font-family: 'GothamProBlack';
+  top: 44vh;
   width: 20px;
-  height: calc(94%);
+  height: 60px;
   right: 0;
   color: #fff;
   font-size: 12px;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
   padding-top: 6px;
   line-height: 20px;
@@ -327,6 +351,8 @@ section#main_page .social ul li .mail {
   color: #508EF2;
 }
 section#main_page .social ul li a {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   font-size: 1em;
   letter-spacing: 1em;
@@ -345,6 +371,8 @@ section#main_page .social ul li:last-of-type {
 }
 section#about {
   overflow: hidden;
+  -webkit-transition: left 1s;
+  -o-transition: left 1s;
   transition: left 1s;
   position: fixed;
   top: 0;
@@ -372,15 +400,20 @@ section#about .scroll_line .sign_scroll {
   font-size: 1em;
   letter-spacing: 3vh;
   color: #000;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 section#about .scroll_line_vertical {
   overflow: hidden;
   position: absolute;
-  top: 51vh;
+  top: 44vh;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
   right: 46%;
   width: 60px;
-  height: 49vh;
+  height: 60vh;
   background: #fff;
   padding-top: 10vh;
 }
@@ -392,17 +425,21 @@ section#about .scroll_line_vertical .sign_scroll_vert {
   font-family: 'GothamProBlack';
   font-size: 1em;
   line-height: 3.2vh;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 section#about .about_cards {
   position: relative;
   display: inline-block;
-  top: 54vh;
+  top: 14vh;
   width: 49%;
 }
 section#about .about_cards .about_card {
   height: 16vh;
   opacity: 0;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
   transition: 0.6s;
 }
 section#about .about_cards .about_card h3 {
@@ -416,16 +453,24 @@ section#about .about_cards .about_card .about_card_text {
   color: #fff;
 }
 section#about .about_cards .about_card:first-of-type {
+  -webkit-transition-delay: 0.7s;
+  -o-transition-delay: 0.7s;
   transition-delay: 0.7s;
 }
 section#about .about_cards .about_card:nth-of-type(2) {
+  -webkit-transition-delay: 0.8s;
+  -o-transition-delay: 0.8s;
   transition-delay: 0.8s;
 }
 section#about .about_cards .about_card:last-of-type {
+  -webkit-transition-delay: 0.9s;
+  -o-transition-delay: 0.9s;
   transition-delay: 0.9s;
 }
 section#about .about_cards .about_card.active {
   opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 section#about .left_block {
@@ -433,6 +478,8 @@ section#about .left_block {
   padding-left: 5%;
 }
 section#about .left_block .about_card {
+  -webkit-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
   transform: translateX(-20%);
 }
 section#about .right_block {
@@ -440,6 +487,8 @@ section#about .right_block {
   padding-left: 10%;
 }
 section#about .right_block .about_card {
+  -webkit-transform: translateX(20%);
+  -ms-transform: translateX(20%);
   transform: translateX(20%);
 }
 #our_team_block {
@@ -462,6 +511,8 @@ section#about .right_block .about_card {
   background: none;
   text-align: left;
   font-size: 1.8em;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .skill:hover {
@@ -485,6 +536,8 @@ section#about .right_block .about_card {
   overflow: hidden;
   height: 0;
   font-size: 0.8em;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   line-height: 38px;
 }
@@ -515,6 +568,8 @@ section#about .right_block .about_card {
   width: 350px;
   height: 350px;
   margin-bottom: 160px;
+  -webkit-transition: 0.8s 0.1s;
+  -o-transition: 0.8s 0.1s;
   transition: 0.8s 0.1s;
   font-family: 'GothamProRegular';
 }
@@ -527,7 +582,11 @@ section#about .right_block .about_card {
 .team_card .card_photo_wrapper img {
   height: 100%;
   width: 100%;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
   transform: scale(1.5);
+  -webkit-transition: 1.2s;
+  -o-transition: 1.2s;
   transition: 1.2s;
 }
 .team_card .team_card_sign {
@@ -545,37 +604,57 @@ section#about .right_block .about_card {
   opacity: 0;
   top: 50%;
   left: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   transform: translateX(100%);
+  -webkit-transition: .4s .8s;
+  -o-transition: .4s .8s;
   transition: .4s .8s;
   width: 140px;
   height: 3px;
   background: black;
 }
 .team_card .card_name {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   transform: translateX(100%);
+  -webkit-transition: .4s 1s;
+  -o-transition: .4s 1s;
   transition: .4s 1s;
   display: inline-block;
   opacity: 0;
 }
 .team_card .card_position {
   display: inline-block;
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
   transform: translateX(200%);
+  -webkit-transition: .4s 1.2s;
+  -o-transition: .4s 1.2s;
   transition: .4s 1.2s;
   opacity: 0;
   color: #00b3e7;
 }
 .team_card .animated img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 .team_card .animated ~ .team_card_sign::before {
   opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 .team_card .animated ~ .team_card_sign .card_name {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
 }
 .team_card .animated ~ .team_card_sign .card_position {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   transform: translateX(100%);
   opacity: 1;
 }
@@ -585,5 +664,10 @@ section#about .right_block .about_card {
   position: relative;
   overflow: hidden;
   background: #00b3e7;
+}
+.review .section_title_shadow {
+  -webkit-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  transform: translateX(-15px);
 }
 /*======== Адаптив ========*/
