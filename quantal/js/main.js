@@ -139,14 +139,16 @@ window.onscroll = function() {
 		$("#scrollSignReview").css({ 'transform' : 'translateY(' + reviewHalf + 'px)', 'transition-delay' : '0s', 'transition' : '0s' });
 	}
 
-	if ( scrolled > $(".review_plus_works").offset().top ) {
+	if ( scrolled > reviewPlusWorks.offset().top ) {
 		review.css({ 'position' : 'fixed' });
+		$('.works').css({ 'position' : 'fixed' });
 	}
 	else{
 		review.css({ 'position' : 'relative' });
+		$('.works').css({ 'position' : 'relative' });
 	}
 
-	if ( scrolled > reviewPlusWorks.offset().top + (0.6 * height) ) {
+	if ( scrolled > reviewPlusWorks.offset().top + (0.4 * height) ) {
 		$("#scrollSignReviewHor").css({ 'opacity' : '1', 'transform' : 'translate(0, 20px)' });
 	}
 	else{
@@ -155,15 +157,75 @@ window.onscroll = function() {
 
 	if ( scrolled > reviewPlusWorks.offset().top + height ) {
 		$(".review").css({ 'left' : '-100%' });
+		$('.works').css({ 'left' : '0' });
 	}
 	else{
 		$(".review").css({ 'left' : '0' });
+		$('.works').css({ 'left' : '100%' });
+	}
+
+	//works
+	if ( scrolled > reviewPlusWorks.offset().top + 2 * height) {
+		$(".works").css({ 'left' : '-100%' });
+		$(".works_second_page").css({ 'position' : 'fixed' ,'left' : '0', 'top' : '0' });	
+		$("#scrollSignReviewHor").css({ 'left' : '40%', 'positon' : 'absolute' });
+	}
+	else{
+		$(".works_second_page").css({ 'left' : '100%' });
+		$("#scrollSignReviewHor").css({ 'left' : '54%', 'positon' : 'fixed' });
+	}
+
+	//footer
+	var footer = $(".footer");
+
+	if ( scrolled > footer.offset().top - height ) {
+		$("#scrollSignReviewHor").css({ 'opacity' : '0', 'transition' : 'all 0s' });
+		$("#scrollSignWorks").css({ 'transform' : 'translateY(10%)' });
+
+		$('.works').css({ 'position' : 'relative', 'top' : '300vh' });
+		$('.works_second_page').css({ 'position' : 'relative', 'top' : '200vh' });
+	}
+	else{
+		$('.works').css({ 'top' : '0' });
+		$("#scrollSignReviewHor").css({ 'transition' : 'all .4s' });
+		$("#scrollSignWorks").css({ 'transform' : 'translateY(-100%)' });
+	}
+
+	if ( scrolled > footer.offset().top - 0.5 * height ) {
+		$("#scrollSignWorks").css({ 'position' : 'fixed', 'top' : '70%' });
+	}
+	else{
+		$("#scrollSignWorks").css({ 'position' : 'absolute', 'top' : '0' });
 	}
 };
 
 function scrollToAbout() {
 	var height = $(window).height();
 
-    $("html, body").animate({ scrollTop: height }, 600);
- };
+	$("html, body").animate({ scrollTop: height }, 600);
+};
+
+
+
+/*carousel*/
+$(document).ready(function(){
+	$('.owl-carousel').owlCarousel({
+	loop:true,
+	margin:50,
+	nav:true,
+	navText:['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>'],
+	responsive:{
+	    0:{
+	        items:1
+	    },
+	    600:{
+	        items:2
+	    },
+	    1000:{
+	        items:3
+	    }
+	}
+	});
+});
+
 /* Endof scrolling functions */
