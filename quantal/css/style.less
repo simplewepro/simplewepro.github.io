@@ -657,11 +657,15 @@ section#about{
 }
 .carousel_item{
 	.regular;
+	width: 100%;
 	color: #fff;
 	text-align: center;
 	.img_wrapper{
 		width: 150px;
 		margin: 0 auto;
+		img{
+			width: 100%;
+		}
 	}
 	h2{
 		text-transform: uppercase;
@@ -675,23 +679,7 @@ section#about{
 		margin-top: 20px;
 	}
 }
-.owl-nav{
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	color: white;
-	i{
-		font-size: 2em;
-	}
-	.owl-prev{
-		position: absolute;
-		left: -30px;
-	}
-	.owl-next{
-		position: absolute;
-		right: -30px;
-	}
-}
+
 /*====== Works ======*/
 
 .works{
@@ -741,7 +729,7 @@ section#about{
 	}
 	&.fourth_card{
 		top: auto;
-		bottom: 10vh;
+		bottom: 40px;
 
 	}
 }

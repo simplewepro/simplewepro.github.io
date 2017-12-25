@@ -10,17 +10,14 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="css/carouseller.css">
 	<!-- Jquery -->
 	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
 	
 	<!-- libs -->
-	<script src="js/less.min.js" type="text/javascript"></script>
+	<script src="js/carouseller.min.js" type="text/javascript"></script>
 	<script src="https://use.fontawesome.com/6a3ea28f4e.js"></script>
 	<script src="js/main.js" type="text/javascript"></script>
-	<script src="/node_modules/jquery/dist/jquery.js"></script>
-	<script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 </head>
 <body>
 
@@ -295,58 +292,67 @@
 
 			<!-- carousel -->
 			<div class="carousel_wrapper">
-				<div class="owl-carousel owl-theme">
-					<div class="carousel_item">
-						<div class="img_wrapper">
-							<img src="img/review/omnitudeapp.jpg" alt="review item">
+				<div class="carouseller"> 
+					<a href="javascript:void(0)" class="carouseller__left"><i class="fa fa-chevron-left"></i></a> 
+					<div class="carouseller__wrap"> 
+						<div class="carouseller__list"> 
+							<div class="car__4">
+								<div class="carousel_item">
+									<div class="img_wrapper">
+										<img src="img/review/omnitudeapp.jpg" alt="review item">
+									</div>
+									<h2 class="review_item_title">
+										Oneminuteapp, Inc
+									</h2>
+									<h4>
+										“Simply speaking, I can't thank the Quantal team enough. No words can describe my respect to their skill. One should value any opportunity to work with Quantal.”
+									</h4>
+								</div>
+							</div>
+							<div class="car__4">
+								<div class="carousel_item">
+									<div class="img_wrapper">
+										<img src="img/review/learnvest.png" alt="review item">
+									</div>
+									<h2 class="review_item_title">
+										Learnvest
+									</h2>
+									<h4>
+										“The Quantal team is a group of top performers. They are great in what they do. You can greatly enhance your product with their team. I can’t wait to work with them.”
+									</h4>
+								</div>
+							</div>
+							<div class="car__4">
+								<div class="carousel_item">
+									<div class="img_wrapper">
+										<img src="img/review/cisco.jpg" alt="review item">
+									</div>
+									<h2 class="review_item_title">
+										Cisco
+									</h2>
+									<h4>
+										“Good job, Quantal!"
+									</h4>
+								</div>
+							</div>
+							<div class="car__4">
+								<div class="carousel_item">
+									<div class="img_wrapper">
+										<img src="img/review/omnitudeapp.jpg" alt="review item">
+									</div>
+									<h2 class="review_item_title">
+										Oneminuteapp, Inc
+									</h2>
+									<h4>
+										“Simply speaking, I can't thank the Quantal team enough. No words can describe my respect to their skill. One should value any opportunity to work with Quantal.”
+									</h4>
+								</div>
+							</div>
 						</div>
-						<h2 class="review_item_title">
-							Oneminuteapp, Inc
-						</h2>
-						<h4>
-							“Simply speaking, I can't thank the Quantal team enough. No words can describe my respect to their skill. One should value any opportunity to work with Quantal.”
-						</h4>
 					</div>
-					
-					<div class="carousel_item">
-						<div class="img_wrapper">
-							<img src="img/review/learnvest.png" alt="review item">
-						</div>
-						<h2 class="review_item_title">
-							Learnvest
-						</h2>
-						<h4>
-							“The Quantal team is a group of top performers. They are great in what they do. You can greatly enhance your product with their team. I can’t wait to work with them.”
-						</h4>
-					</div>
-
-					<div class="carousel_item">
-						<div class="img_wrapper">
-							<img src="img/review/cisco.jpg" alt="review item">
-						</div>
-						<h2 class="review_item_title">
-							Cisco
-						</h2>
-						<h4>
-							“Good job, Quantal!"
-						</h4>
-
-					</div>
-
-					<div class="carousel_item">
-						<div class="img_wrapper">
-							<img src="img/review/omnitudeapp.jpg" alt="review item">
-						</div>
-						<h2 class="review_item_title">
-							Oneminuteapp, Inc
-						</h2>
-						<h4>
-							“Simply speaking, I can't thank the Quantal team enough. No words can describe my respect to their skill. One should value any opportunity to work with Quantal.”
-						</h4>
-					</div>
+					<a href="javascript:void(0)" class="carouseller__right"><i class="fa fa-chevron-right"></i></a> 
 				</div>
 			</div>
-		</section>
 		<section class="works">
 			<div class="section_title_wrapper">
 				<div class="section_title_shadow">
@@ -459,6 +465,12 @@
 	<script src="js/wow.min.js"></script>
 	<script>
 		new WOW().init();
+		$(function() {
+			$('.carouseller').carouseller({
+				//options
+				easing: 'linear'
+			});
+		});
 	</script>
 	<script src="js/parallax.min.js"></script>
 </body>

@@ -740,12 +740,16 @@ section#about .right_block .about_card {
 }
 .carousel_item {
   font-family: 'GothamProRegular';
+  width: 100%;
   color: #fff;
   text-align: center;
 }
 .carousel_item .img_wrapper {
   width: 150px;
   margin: 0 auto;
+}
+.carousel_item .img_wrapper img {
+  width: 100%;
 }
 .carousel_item h2 {
   text-transform: uppercase;
@@ -757,23 +761,6 @@ section#about .right_block .about_card {
   font-size: 1em;
   font-weight: lighter;
   margin-top: 20px;
-}
-.owl-nav {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  color: white;
-}
-.owl-nav i {
-  font-size: 2em;
-}
-.owl-nav .owl-prev {
-  position: absolute;
-  left: -30px;
-}
-.owl-nav .owl-next {
-  position: absolute;
-  right: -30px;
 }
 /*====== Works ======*/
 .works {
@@ -830,7 +817,7 @@ section#about .right_block .about_card {
 }
 .work_card.fourth_card {
   top: auto;
-  bottom: 10vh;
+  bottom: 40px;
 }
 .work_image {
   display: inline-block;
